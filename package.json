@@ -51,12 +51,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write"
-    ]
+    "prepare": "husky install",
+    "format": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
