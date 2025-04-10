@@ -12,7 +12,7 @@ export default function CardLinkOne() {
           <CardDescription>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
             architecto aspernatur cum et ipsum
-          </CardDescription>
+               </CardDescription>
 
           <Link
             to="/"
