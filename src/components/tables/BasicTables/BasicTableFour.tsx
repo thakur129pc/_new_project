@@ -1,16 +1,10 @@
-"use client";
-import React, { useState } from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableRow,
-} from "../../ui/table";
-import Badge from "../../ui/badge/Badge";
-import { MoreDotIcon } from "../../../icons";
-import { Dropdown } from "../../ui/dropdown/Dropdown";
-import { DropdownItem } from "../../ui/dropdown/DropdownItem";
+'use client';
+import React, { useState } from 'react';
+import { Table, TableBody, TableCell, TableHeader, TableRow } from '../../ui/table';
+import Badge from '../../ui/badge/Badge';
+import { MoreDotIcon } from '../../../icons';
+import { Dropdown } from '../../ui/dropdown/Dropdown';
+import { DropdownItem } from '../../ui/dropdown/DropdownItem';
 
 interface Campaign {
   id: number;
@@ -30,80 +24,80 @@ const campaigns: Campaign[] = [
   {
     id: 1,
     creator: {
-      image: "/images/user/user-01.jpg",
-      name: "Wilson Gouse",
+      image: '/images/user/user-01.jpg',
+      name: 'Wilson Gouse',
     },
     campaign: {
-      image: "/images/brand/brand-01.svg",
-      name: "Grow your brand by...",
-      type: "Ads campaign",
+      image: '/images/brand/brand-01.svg',
+      name: 'Grow your brand by...',
+      type: 'Ads campaign',
     },
-    status: "Success",
+    status: 'Success',
   },
   {
     id: 2,
     creator: {
-      image: "/images/user/user-02.jpg",
-      name: "Wilson Gouse",
+      image: '/images/user/user-02.jpg',
+      name: 'Wilson Gouse',
     },
     campaign: {
-      image: "/images/brand/brand-02.svg",
-      name: "Make Better Ideas...",
-      type: "Ads campaign",
+      image: '/images/brand/brand-02.svg',
+      name: 'Make Better Ideas...',
+      type: 'Ads campaign',
     },
-    status: "Pending",
+    status: 'Pending',
   },
   {
     id: 3,
     creator: {
-      image: "/images/user/user-03.jpg",
-      name: "Wilson Gouse",
+      image: '/images/user/user-03.jpg',
+      name: 'Wilson Gouse',
     },
     campaign: {
-      image: "/images/brand/brand-03.svg",
-      name: "Increase your website tra...",
-      type: "Ads campaign",
+      image: '/images/brand/brand-03.svg',
+      name: 'Increase your website tra...',
+      type: 'Ads campaign',
     },
-    status: "Success",
+    status: 'Success',
   },
   {
     id: 4,
     creator: {
-      image: "/images/user/user-04.jpg",
-      name: "Wilson Gouse",
+      image: '/images/user/user-04.jpg',
+      name: 'Wilson Gouse',
     },
     campaign: {
-      image: "/images/brand/brand-04.svg",
-      name: "Grow your brand by...",
-      type: "Ads campaign",
+      image: '/images/brand/brand-04.svg',
+      name: 'Grow your brand by...',
+      type: 'Ads campaign',
     },
-    status: "Failed",
+    status: 'Failed',
   },
   {
     id: 5,
     creator: {
-      image: "/images/user/user-05.jpg",
-      name: "Wilson Gouse",
+      image: '/images/user/user-05.jpg',
+      name: 'Wilson Gouse',
     },
     campaign: {
-      image: "/images/brand/brand-05.svg",
-      name: "Grow your brand by...",
-      type: "Ads campaign",
+      image: '/images/brand/brand-05.svg',
+      name: 'Grow your brand by...',
+      type: 'Ads campaign',
     },
-    status: "Success",
+    status: 'Success',
   },
   {
     id: 6,
     creator: {
-      image: "/images/user/user-06.jpg",
-      name: "Wilson Gouse",
+      image: '/images/user/user-06.jpg',
+      name: 'Wilson Gouse',
     },
     campaign: {
-      image: "/images/brand/brand-06.svg",
-      name: "Grow your brand by...",
-      type: "Ads campaign",
+      image: '/images/brand/brand-06.svg',
+      name: 'Grow your brand by...',
+      type: 'Ads campaign',
     },
-    status: "Success",
+    status: 'Success',
   },
 ];
 
@@ -130,11 +124,7 @@ export default function BasicTableFour() {
           <button onClick={toggleDropdown}>
             <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300" />
           </button>
-          <Dropdown
-            isOpen={isOpen}
-            onClose={closeDropdown}
-            className="w-40 p-2"
-          >
+          <Dropdown isOpen={isOpen} onClose={closeDropdown} className="w-40 p-2">
             <DropdownItem
               onItemClick={closeDropdown}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
@@ -223,11 +213,11 @@ export default function BasicTableFour() {
                     <Badge
                       size="sm"
                       color={
-                        item.status === "Success"
-                          ? "success"
-                          : item.status === "Pending"
-                          ? "warning"
-                          : "error"
+                        item.status === 'Success'
+                          ? 'success'
+                          : item.status === 'Pending'
+                            ? 'warning'
+                            : 'error'
                       }
                     >
                       {item.status}

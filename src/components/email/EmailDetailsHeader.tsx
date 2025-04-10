@@ -1,5 +1,5 @@
-import React from "react";
-import useGoBack from "../../hooks/useGoBack";
+import React from 'react';
+import useGoBack from '../../hooks/useGoBack';
 
 export default function EmailDetailsHeader() {
   const goBack = useGoBack();

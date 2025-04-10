@@ -1,7 +1,7 @@
-import React from "react";
-import PageBreadcrumb from "../../components/common/PageBreadCrumb";
-import TabExample from "../../components/ui/tabs";
-import PageMeta from "../../components/common/PageMeta";
+import React from 'react';
+import PageBreadcrumb from '../../components/common/PageBreadCrumb';
+import TabExample from '../../components/ui/tabs';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function Tabs() {
   return (

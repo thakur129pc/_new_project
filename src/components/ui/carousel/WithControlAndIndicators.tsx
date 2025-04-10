@@ -1,19 +1,19 @@
-import React from "react";
-import { Navigation, Autoplay, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from 'react';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const carouselData = [
   {
-    thumbnail: "/images/carousel/carousel-01.png",
+    thumbnail: '/images/carousel/carousel-01.png',
   },
   {
-    thumbnail: "/images/carousel/carousel-02.png",
+    thumbnail: '/images/carousel/carousel-02.png',
   },
   {
-    thumbnail: "/images/carousel/carousel-03.png",
+    thumbnail: '/images/carousel/carousel-03.png',
   },
   {
-    thumbnail: "/images/carousel/carousel-04.png",
+    thumbnail: '/images/carousel/carousel-04.png',
   },
 ];
 export default function WithControlAndIndicators() {
@@ -24,12 +24,12 @@ export default function WithControlAndIndicators() {
       disableOnInteraction: false,
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination',
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   };
   return (
@@ -39,11 +39,7 @@ export default function WithControlAndIndicators() {
         {carouselData.map((item, i) => (
           <SwiperSlide key={i + 1}>
             <div className="overflow-hidden rounded-lg">
-              <img
-                src={item.thumbnail}
-                className="w-full rounded-lg"
-                alt="carousel"
-              />
+              <img src={item.thumbnail} className="w-full rounded-lg" alt="carousel" />
             </div>
           </SwiperSlide>
         ))}

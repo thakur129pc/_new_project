@@ -1,14 +1,14 @@
-import React from "react";
-import Chart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
-import ChartTab from "../common/ChartTab";
+import React from 'react';
+import Chart from 'react-apexcharts';
+import { ApexOptions } from 'apexcharts';
+import ChartTab from '../common/ChartTab';
 
 export default function AnalyticsBarChart() {
   const options: ApexOptions = {
-    colors: ["#465fff"],
+    colors: ['#465fff'],
     chart: {
-      fontFamily: "Outfit, sans-serif",
-      type: "bar",
+      fontFamily: 'Outfit, sans-serif',
+      type: 'bar',
       height: 350,
       toolbar: {
         show: false,
@@ -17,9 +17,9 @@ export default function AnalyticsBarChart() {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: "45%",
+        columnWidth: '45%',
         borderRadius: 5,
-        borderRadiusApplication: "end",
+        borderRadiusApplication: 'end',
       },
     },
     dataLabels: {
@@ -28,40 +28,40 @@ export default function AnalyticsBarChart() {
     stroke: {
       show: true,
       width: 4,
-      colors: ["transparent"],
+      colors: ['transparent'],
     },
     xaxis: {
       categories: [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24",
-        "25",
-        "26",
-        "27",
-        "28",
-        "29",
-        "30",
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+        '11',
+        '12',
+        '13',
+        '14',
+        '15',
+        '16',
+        '17',
+        '18',
+        '19',
+        '20',
+        '21',
+        '22',
+        '23',
+        '24',
+        '25',
+        '26',
+        '27',
+        '28',
+        '29',
+        '30',
       ],
       axisBorder: {
         show: false,
@@ -72,9 +72,9 @@ export default function AnalyticsBarChart() {
     },
     legend: {
       show: true,
-      position: "top",
-      horizontalAlign: "left",
-      fontFamily: "Outfit",
+      position: 'top',
+      horizontalAlign: 'left',
+      fontFamily: 'Outfit',
     },
     grid: {
       yaxis: {
@@ -99,11 +99,10 @@ export default function AnalyticsBarChart() {
 
   const series = [
     {
-      name: "Sales",
+      name: 'Sales',
       data: [
-        168, 385, 201, 298, 187, 195, 291, 110, 215, 390, 280, 112, 123, 212,
-        270, 190, 310, 115, 90, 380, 112, 223, 292, 170, 290, 110, 115, 290,
-        380, 312,
+        168, 385, 201, 298, 187, 195, 291, 110, 215, 390, 280, 112, 123, 212, 270, 190, 310, 115,
+        90, 380, 112, 223, 292, 170, 290, 110, 115, 290, 380, 312,
       ],
     },
   ];
@@ -111,9 +110,7 @@ export default function AnalyticsBarChart() {
     <div className="rounded-2xl border border-gray-200 bg-white px-5 pt-5 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6 sm:pt-6">
       <div className="flex flex-wrap items-start justify-between gap-5">
         <div>
-          <h3 className="mb-1 text-lg font-semibold text-gray-800 dark:text-white/90">
-            Analytics
-          </h3>
+          <h3 className="mb-1 text-lg font-semibold text-gray-800 dark:text-white/90">Analytics</h3>
           <span className="block text-gray-500 text-theme-sm dark:text-gray-400">
             Visitor analytics of last 30 days
           </span>

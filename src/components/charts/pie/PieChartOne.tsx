@@ -1,22 +1,22 @@
-import React from "react";
-import Chart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
+import React from 'react';
+import Chart from 'react-apexcharts';
+import { ApexOptions } from 'apexcharts';
 
 export default function PieChartOne() {
   const options: ApexOptions = {
-    colors: ["#3641f5", "#7592ff", "#dde9ff"],
-    labels: ["Desktop", "Mobile", "Tablet"],
+    colors: ['#3641f5', '#7592ff', '#dde9ff'],
+    labels: ['Desktop', 'Mobile', 'Tablet'],
     chart: {
-      fontFamily: "Outfit, sans-serif",
-      type: "donut",
+      fontFamily: 'Outfit, sans-serif',
+      type: 'donut',
       width: 445,
       height: 290,
     },
     plotOptions: {
       pie: {
         donut: {
-          size: "65%",
-          background: "transparent",
+          size: '65%',
+          background: 'transparent',
           labels: {
             show: true,
             value: {
@@ -30,13 +30,13 @@ export default function PieChartOne() {
     states: {
       hover: {
         filter: {
-          type: "none",
+          type: 'none',
         },
       },
       active: {
         allowMultipleDataPointsSelection: false,
         filter: {
-          type: "darken",
+          type: 'darken',
         },
       },
     },
@@ -53,14 +53,14 @@ export default function PieChartOne() {
 
     legend: {
       show: true,
-      position: "bottom",
-      horizontalAlign: "center",
-      fontFamily: "Outfit",
-      fontSize: "14px",
+      position: 'bottom',
+      horizontalAlign: 'center',
+      fontFamily: 'Outfit',
+      fontSize: '14px',
       fontWeight: 400,
       markers: {
         size: 4,
-        shape: "circle",
+        shape: 'circle',
 
         strokeWidth: 0,
       },

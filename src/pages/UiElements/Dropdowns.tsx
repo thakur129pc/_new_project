@@ -1,11 +1,11 @@
-import React from "react";
-import PageBreadcrumb from "../../components/common/PageBreadCrumb";
-import ComponentCard from "../../components/common/ComponentCard";
-import PageMeta from "../../components/common/PageMeta";
-import AccountMenuDropdown from "../../components/ui/dropdown/AccountMenuDropdown";
-import DropdownWithDivider from "../../components/ui/dropdown/DropdownWithDivider";
-import DropdownWithIcon from "../../components/ui/dropdown/DropdownWithIcon";
-import DropdownWithIconAndDivider from "../../components/ui/dropdown/DropdownWithIconAndDivider";
+import React from 'react';
+import PageBreadcrumb from '../../components/common/PageBreadCrumb';
+import ComponentCard from '../../components/common/ComponentCard';
+import PageMeta from '../../components/common/PageMeta';
+import AccountMenuDropdown from '../../components/ui/dropdown/AccountMenuDropdown';
+import DropdownWithDivider from '../../components/ui/dropdown/DropdownWithDivider';
+import DropdownWithIcon from '../../components/ui/dropdown/DropdownWithIcon';
+import DropdownWithIconAndDivider from '../../components/ui/dropdown/DropdownWithIconAndDivider';
 
 export default function Dropdowns() {
   return (

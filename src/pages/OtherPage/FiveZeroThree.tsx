@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router";
-import GridShape from "../../components/common/GridShape";
-import PageMeta from "../../components/common/PageMeta";
+import React from 'react';
+import { Link } from 'react-router';
+import GridShape from '../../components/common/GridShape';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function FiveZeroThree() {
   return (
@@ -19,11 +19,7 @@ export default function FiveZeroThree() {
           </h1>
 
           <img src="./images/error/503.svg" alt="503" className="dark:hidden" />
-          <img
-            src="./images/error/503-dark.svg"
-            alt="503"
-            className="hidden dark:block"
-          />
+          <img src="./images/error/503-dark.svg" alt="503" className="hidden dark:block" />
 
           <p className="mt-10 mb-6 text-base text-gray-700 dark:text-gray-400 sm:text-lg">
             We can’t seem to find the page you are looking for!

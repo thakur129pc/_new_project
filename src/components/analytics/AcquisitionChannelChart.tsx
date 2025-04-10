@@ -1,34 +1,34 @@
-import Chart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
-import { Dropdown } from "../ui/dropdown/Dropdown";
-import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { MoreDotIcon } from "../../icons";
-import { useState } from "react";
+import Chart from 'react-apexcharts';
+import { ApexOptions } from 'apexcharts';
+import { Dropdown } from '../ui/dropdown/Dropdown';
+import { DropdownItem } from '../ui/dropdown/DropdownItem';
+import { MoreDotIcon } from '../../icons';
+import { useState } from 'react';
 
 export default function AcquisitionChannelChart() {
   const series = [
     {
-      name: "Direct",
+      name: 'Direct',
       data: [44, 55, 41, 67, 22, 43, 55, 41],
     },
     {
-      name: "Referral",
+      name: 'Referral',
       data: [13, 23, 20, 8, 13, 27, 13, 23],
     },
     {
-      name: "Organic Search",
+      name: 'Organic Search',
       data: [11, 17, 15, 15, 21, 14, 18, 20],
     },
     {
-      name: "Social",
+      name: 'Social',
       data: [21, 7, 25, 13, 22, 8, 18, 20],
     },
   ];
   const options: ApexOptions = {
-    colors: ["#2a31d8", "#465fff", "#7592ff", "#c2d6ff"],
+    colors: ['#2a31d8', '#465fff', '#7592ff', '#c2d6ff'],
     chart: {
-      fontFamily: "Outfit, sans-serif",
-      type: "bar",
+      fontFamily: 'Outfit, sans-serif',
+      type: 'bar',
       stacked: true,
       height: 315,
       toolbar: {
@@ -41,17 +41,17 @@ export default function AcquisitionChannelChart() {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: "39%",
+        columnWidth: '39%',
         borderRadius: 10,
-        borderRadiusApplication: "end",
-        borderRadiusWhenStacked: "last",
+        borderRadiusApplication: 'end',
+        borderRadiusWhenStacked: 'last',
       },
     },
     dataLabels: {
       enabled: false,
     },
     xaxis: {
-      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
       axisBorder: {
         show: false,
       },
@@ -61,14 +61,14 @@ export default function AcquisitionChannelChart() {
     },
     legend: {
       show: true,
-      position: "top",
-      horizontalAlign: "left",
-      fontFamily: "Outfit",
-      fontSize: "14px",
+      position: 'top',
+      horizontalAlign: 'left',
+      fontFamily: 'Outfit',
+      fontSize: '14px',
       fontWeight: 400,
       markers: {
         size: 5,
-        shape: "circle",
+        shape: 'circle',
         strokeWidth: 0,
       },
       itemMargin: {
@@ -120,11 +120,7 @@ export default function AcquisitionChannelChart() {
           <button onClick={toggleDropdown}>
             <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300" />
           </button>
-          <Dropdown
-            isOpen={isOpen}
-            onClose={closeDropdown}
-            className="w-40 p-2"
-          >
+          <Dropdown isOpen={isOpen} onClose={closeDropdown} className="w-40 p-2">
             <DropdownItem
               onItemClick={closeDropdown}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"

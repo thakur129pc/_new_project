@@ -1,5 +1,5 @@
-import React from "react";
-import clsx from "clsx"; // Install with: npm install clsx
+import React from 'react';
+import clsx from 'clsx'; // Install with: npm install clsx
 
 interface CheckboxProps {
   label?: string;
@@ -15,24 +15,24 @@ const Checkbox: React.FC<CheckboxProps> = ({
   checked,
   id,
   onChange,
-  className = "",
+  className = '',
   disabled = false,
 }) => {
   return (
     <label
       className={clsx(
-        "flex items-center space-x-3 cursor-pointer text-gray-800 dark:text-gray-200",
-        { "cursor-not-allowed opacity-50": disabled }
+        'flex items-center space-x-3 cursor-pointer text-gray-800 dark:text-gray-200',
+        { 'cursor-not-allowed opacity-50': disabled },
       )}
     >
       <input
         id={id}
         type="checkbox"
         className={clsx(
-          "w-4 h-4 border-gray-300 rounded focus:ring-2 focus:ring-brand-500",
-          "dark:bg-gray-700 dark:border-gray-600 dark:checked:bg-brand-500 dark:checked:border-brand-500",
-          "focus:ring-offset-0 focus:outline-none",
-          className
+          'w-4 h-4 border-gray-300 rounded focus:ring-2 focus:ring-brand-500',
+          'dark:bg-gray-700 dark:border-gray-600 dark:checked:bg-brand-500 dark:checked:border-brand-500',
+          'focus:ring-offset-0 focus:outline-none',
+          className,
         )}
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}

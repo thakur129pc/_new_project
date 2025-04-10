@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function Todo() {
   return (
@@ -59,11 +59,7 @@ export default function Todo() {
 
             <label htmlFor="taskCheckbox1" className="w-full cursor-pointer">
               <div className="relative flex items-start">
-                <input
-                  type="checkbox"
-                  id="taskCheckbox1"
-                  className="sr-only taskCheckbox"
-                />
+                <input type="checkbox" id="taskCheckbox1" className="sr-only taskCheckbox" />
                 <div className="flex items-center justify-center w-full h-5 mr-3 border border-gray-300 rounded-md box max-w-5 dark:border-gray-700">
                   <span className="opacity-0">
                     <svg

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export default function MailBox() {
-  const [activeItem, setActiveItem] = useState("inbox");
+  const [activeItem, setActiveItem] = useState('inbox');
 
   const menuItems = [
-    { name: "Inbox", key: "inbox", count: 3, icon: InboxIcon },
-    { name: "Sent", key: "sent", icon: SentIcon },
-    { name: "Drafts", key: "draft", icon: DraftIcon },
-    { name: "Spam", key: "spam", count: 2, icon: SpamIcon },
-    { name: "Trash", key: "trash", icon: TrashIcon },
-    { name: "Archive", key: "archive", icon: ArchiveIcon },
+    { name: 'Inbox', key: 'inbox', count: 3, icon: InboxIcon },
+    { name: 'Sent', key: 'sent', icon: SentIcon },
+    { name: 'Drafts', key: 'draft', icon: DraftIcon },
+    { name: 'Spam', key: 'spam', count: 2, icon: SpamIcon },
+    { name: 'Trash', key: 'trash', icon: TrashIcon },
+    { name: 'Archive', key: 'archive', icon: ArchiveIcon },
   ];
   return (
     <ul className="flex flex-col gap-1">
@@ -20,8 +20,8 @@ export default function MailBox() {
             className={`group flex w-full items-center justify-between gap-2 rounded-lg px-3 py-2.5 text-sm font-medium
               ${
                 activeItem === item.key
-                  ? "text-brand-500 bg-brand-50 dark:text-brand-400 dark:bg-brand-500/[0.12]"
-                  : "text-gray-500 dark:text-gray-400"
+                  ? 'text-brand-500 bg-brand-50 dark:text-brand-400 dark:bg-brand-500/[0.12]'
+                  : 'text-gray-500 dark:text-gray-400'
               }
               hover:bg-brand-50 hover:text-brand-500 dark:hover:bg-brand-500/[0.12] dark:hover:text-brand-400`}
           >
@@ -38,13 +38,7 @@ export default function MailBox() {
 }
 
 const InboxIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -54,13 +48,7 @@ const InboxIcon = () => (
   </svg>
 );
 const SentIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -70,13 +58,7 @@ const SentIcon = () => (
   </svg>
 );
 const DraftIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -86,13 +68,7 @@ const DraftIcon = () => (
   </svg>
 );
 const SpamIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -102,13 +78,7 @@ const SpamIcon = () => (
   </svg>
 );
 const TrashIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -118,13 +88,7 @@ const TrashIcon = () => (
   </svg>
 );
 const ArchiveIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"

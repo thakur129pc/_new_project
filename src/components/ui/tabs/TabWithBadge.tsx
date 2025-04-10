@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 interface TabData {
   id: string;
@@ -9,30 +9,30 @@ interface TabData {
 
 const tabData: TabData[] = [
   {
-    id: "overview",
-    label: "Overview",
+    id: 'overview',
+    label: 'Overview',
     content:
-      "Overview ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.",
+      'Overview ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.',
     count: 8,
   },
   {
-    id: "notification",
-    label: "Notification",
+    id: 'notification',
+    label: 'Notification',
     content:
-      "Notification ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.",
+      'Notification ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.',
   },
   {
-    id: "analytics",
-    label: "Analytics",
+    id: 'analytics',
+    label: 'Analytics',
     content:
-      "Analytics ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.",
+      'Analytics ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.',
     count: 4,
   },
   {
-    id: "customers",
-    label: "Customers",
+    id: 'customers',
+    label: 'Customers',
     content:
-      "Customers ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.",
+      'Customers ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.',
     count: 12,
   },
 ];
@@ -45,8 +45,8 @@ const TabButton: React.FC<{
   <button
     className={`inline-flex items-center gap-2 border-b-2 px-2.5 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
       isActive
-        ? "text-brand-500 dark:border-brand-400 border-brand-500 dark:text-brand-400"
-        : "bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+        ? 'text-brand-500 dark:border-brand-400 border-brand-500 dark:text-brand-400'
+        : 'bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
     }`}
     onClick={onClick}
   >
@@ -61,15 +61,13 @@ const TabButton: React.FC<{
 
 const TabContent: React.FC<{ tab: TabData }> = ({ tab }) => (
   <div>
-    <h3 className="mb-1 text-xl font-medium text-gray-800 dark:text-white/90">
-      {tab.label}
-    </h3>
+    <h3 className="mb-1 text-xl font-medium text-gray-800 dark:text-white/90">{tab.label}</h3>
     <p className="text-sm text-gray-500 dark:text-gray-400">{tab.content}</p>
   </div>
 );
 
 const TabWithBadge: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("overview");
+  const [activeTab, setActiveTab] = useState<string>('overview');
 
   return (
     <div className="p-6 border border-gray-200 rounded-xl dark:border-gray-800">
@@ -88,10 +86,7 @@ const TabWithBadge: React.FC = () => {
 
       <div className="pt-4 dark:border-gray-800">
         {tabData.map((tab) => (
-          <div
-            key={tab.id}
-            style={{ display: activeTab === tab.id ? "block" : "none" }}
-          >
+          <div key={tab.id} style={{ display: activeTab === tab.id ? 'block' : 'none' }}>
             <TabContent tab={tab} />
           </div>
         ))}

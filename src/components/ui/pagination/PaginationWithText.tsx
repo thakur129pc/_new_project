@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router";
+import React, { useState } from 'react';
+import { Link } from 'react-router';
 
 interface PaginationProps {
   totalPages: number;
@@ -59,8 +59,8 @@ export default function PaginationWithText({
         }}
         className={`flex items-center justify-center w-10 h-10 text-sm font-medium rounded-lg ${
           currentPage === page
-            ? "text-white bg-brand-500 hover:bg-brand-600"
-            : "text-gray-700 hover:bg-brand-500 hover:text-white dark:text-gray-400 dark:hover:text-white"
+            ? 'text-white bg-brand-500 hover:bg-brand-600'
+            : 'text-gray-700 hover:bg-brand-500 hover:text-white dark:text-gray-400 dark:hover:text-white'
         }`}
       >
         {page}
@@ -107,9 +107,7 @@ export default function PaginationWithText({
         Page {currentPage} of {totalPages}
       </span>
 
-      <ul className="hidden items-center gap-0.5 sm:flex">
-        {renderPageNumbers()}
-      </ul>
+      <ul className="hidden items-center gap-0.5 sm:flex">{renderPageNumbers()}</ul>
 
       <button
         onClick={() => handlePageChange(currentPage + 1)}

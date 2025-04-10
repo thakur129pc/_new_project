@@ -1,77 +1,77 @@
-import React from "react";
-import { Link } from "react-router";
-import { ArrowRightIcon } from "../../icons";
+import React from 'react';
+import { Link } from 'react-router';
+import { ArrowRightIcon } from '../../icons';
 
 const tableData = [
   {
-    fileName: "Video_947954.mp4",
+    fileName: 'Video_947954.mp4',
     fileIcon: {
-      light: "/images/icons/file-video.svg",
-      dark: "/images/icons/file-video-dark.svg",
+      light: '/images/icons/file-video.svg',
+      dark: '/images/icons/file-video-dark.svg',
     },
-    category: "Video",
-    size: "89 MB",
-    dateModified: "12 Jan, 2027",
+    category: 'Video',
+    size: '89 MB',
+    dateModified: '12 Jan, 2027',
   },
   {
-    fileName: "Travel.jpg",
+    fileName: 'Travel.jpg',
     fileIcon: {
-      light: "/images/icons/file-image.svg",
-      dark: "/images/icons/file-image-dark.svg",
+      light: '/images/icons/file-image.svg',
+      dark: '/images/icons/file-image-dark.svg',
     },
-    category: "Image",
-    size: "5.4 MB",
-    dateModified: "10 Feb, 2027",
+    category: 'Image',
+    size: '5.4 MB',
+    dateModified: '10 Feb, 2027',
   },
   {
-    fileName: "Document.pdf",
+    fileName: 'Document.pdf',
     fileIcon: {
-      light: "/images/icons/file-pdf.svg",
-      dark: "/images/icons/file-pdf-dark.svg",
+      light: '/images/icons/file-pdf.svg',
+      dark: '/images/icons/file-pdf-dark.svg',
     },
-    category: "Document",
-    size: "1.2 MB",
-    dateModified: "8 Mar, 2027",
+    category: 'Document',
+    size: '1.2 MB',
+    dateModified: '8 Mar, 2027',
   },
   {
-    fileName: "Video_947954_028.mp4",
+    fileName: 'Video_947954_028.mp4',
     fileIcon: {
-      light: "/images/icons/file-video.svg",
-      dark: "/images/icons/file-video-dark.svg",
+      light: '/images/icons/file-video.svg',
+      dark: '/images/icons/file-video-dark.svg',
     },
-    category: "Video",
-    size: "489 MB",
-    dateModified: "29 Apr, 2027",
+    category: 'Video',
+    size: '489 MB',
+    dateModified: '29 Apr, 2027',
   },
   {
-    fileName: "Mountain.png",
+    fileName: 'Mountain.png',
     fileIcon: {
-      light: "/images/icons/file-image.svg",
-      dark: "/images/icons/file-image-dark.svg",
+      light: '/images/icons/file-image.svg',
+      dark: '/images/icons/file-image-dark.svg',
     },
-    category: "Image",
-    size: "5.4 MB",
-    dateModified: "10 Feb, 2027",
+    category: 'Image',
+    size: '5.4 MB',
+    dateModified: '10 Feb, 2027',
   },
   {
-    fileName: "CV.pdf",
+    fileName: 'CV.pdf',
     fileIcon: {
-      light: "/images/icons/file-pdf.svg",
-      dark: "/images/icons/file-pdf-dark.svg",
+      light: '/images/icons/file-pdf.svg',
+      dark: '/images/icons/file-pdf-dark.svg',
     },
-    category: "Document",
-    size: "12 MB",
-    dateModified: "17 Jun, 2027",
+    category: 'Document',
+    size: '12 MB',
+    dateModified: '17 Jun, 2027',
   },
   {
-    fileName: "Video_09783_882943.mp4",
+    fileName: 'Video_09783_882943.mp4',
     fileIcon: {
-      light: "/images/icons/file-video.svg",
-      dark: "/images/icons/file-video-dark.svg",
+      light: '/images/icons/file-video.svg',
+      dark: '/images/icons/file-video-dark.svg',
     },
-    category: "Video",
-    size: "309 MB",
-    dateModified: "27 Jul, 2027",
+    category: 'Video',
+    size: '309 MB',
+    dateModified: '27 Jul, 2027',
   },
 ];
 
@@ -80,9 +80,7 @@ export default function RecentFileTable() {
     <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white pt-4 dark:border-gray-800 dark:bg-white/[0.03]">
       <div className="flex items-center justify-between px-6 mb-4">
         <div>
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-            Recent Files
-          </h3>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">Recent Files</h3>
         </div>
 
         <Link
@@ -120,22 +118,11 @@ export default function RecentFileTable() {
           {/* Table Body */}
           <tbody>
             {tableData.map((row, index) => (
-              <tr
-                key={index}
-                className="border-t border-gray-100 dark:border-gray-800"
-              >
+              <tr key={index} className="border-t border-gray-100 dark:border-gray-800">
                 <td className="px-6 py-[18px] text-sm text-gray-700 dark:text-gray-400">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={row.fileIcon.light}
-                      alt="icon"
-                      className="dark:hidden"
-                    />
-                    <img
-                      src={row.fileIcon.dark}
-                      alt="icon"
-                      className="hidden dark:block"
-                    />
+                    <img src={row.fileIcon.light} alt="icon" className="dark:hidden" />
+                    <img src={row.fileIcon.dark} alt="icon" className="hidden dark:block" />
                     {row.fileName}
                   </div>
                 </td>

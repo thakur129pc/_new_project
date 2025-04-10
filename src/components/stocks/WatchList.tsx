@@ -1,83 +1,83 @@
-import React from "react";
-import { ArrowDownIcon, ArrowUpIcon } from "../../icons";
-import { Dropdown } from "../ui/dropdown/Dropdown";
-import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { MoreDotIcon } from "../../icons";
-import { useState } from "react";
+import React from 'react';
+import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
+import { Dropdown } from '../ui/dropdown/Dropdown';
+import { DropdownItem } from '../ui/dropdown/DropdownItem';
+import { MoreDotIcon } from '../../icons';
+import { useState } from 'react';
 
 type WatchlistItemProps = {
   symbol: string;
   companyName: string;
   price: string;
   change: string;
-  changeDirection: "up" | "down"; // Determines icon and color
+  changeDirection: 'up' | 'down'; // Determines icon and color
   brandImage: string; // Path to the brand image
 };
 
 const watchlistData: WatchlistItemProps[] = [
   {
-    symbol: "AAPL",
-    companyName: "Apple, Inc",
-    price: "$4,008.65",
-    change: "11.01%",
-    changeDirection: "up",
-    brandImage: "./images/brand/brand-07.svg",
+    symbol: 'AAPL',
+    companyName: 'Apple, Inc',
+    price: '$4,008.65',
+    change: '11.01%',
+    changeDirection: 'up',
+    brandImage: './images/brand/brand-07.svg',
   },
   {
-    symbol: "SPOT",
-    companyName: "Spotify.com",
-    price: "$11,689.00",
-    change: "9.48%",
-    changeDirection: "up",
-    brandImage: "./images/brand/brand-11.svg",
+    symbol: 'SPOT',
+    companyName: 'Spotify.com',
+    price: '$11,689.00',
+    change: '9.48%',
+    changeDirection: 'up',
+    brandImage: './images/brand/brand-11.svg',
   },
   {
-    symbol: "ABNB",
-    companyName: "Airbnb, Inc",
-    price: "$32,227.00",
-    change: "0.29%",
-    changeDirection: "down",
-    brandImage: "./images/brand/brand-12.svg",
+    symbol: 'ABNB',
+    companyName: 'Airbnb, Inc',
+    price: '$32,227.00',
+    change: '0.29%',
+    changeDirection: 'down',
+    brandImage: './images/brand/brand-12.svg',
   },
   {
-    symbol: "ENVT",
-    companyName: "Envato, Inc",
-    price: "$13,895.00",
-    change: "3.79%",
-    changeDirection: "up",
-    brandImage: "./images/brand/brand-13.svg",
+    symbol: 'ENVT',
+    companyName: 'Envato, Inc',
+    price: '$13,895.00',
+    change: '3.79%',
+    changeDirection: 'up',
+    brandImage: './images/brand/brand-13.svg',
   },
   {
-    symbol: "QIWI",
-    companyName: "qiwi.com, Inc",
-    price: "$4,008.65",
-    change: "4.52%",
-    changeDirection: "down",
-    brandImage: "./images/brand/brand-14.svg",
+    symbol: 'QIWI',
+    companyName: 'qiwi.com, Inc',
+    price: '$4,008.65',
+    change: '4.52%',
+    changeDirection: 'down',
+    brandImage: './images/brand/brand-14.svg',
   },
   {
-    symbol: "APPL",
-    companyName: "Apple, Inc",
-    price: "$4,523.00",
-    change: "3.12%",
-    changeDirection: "up",
-    brandImage: "./images/brand/brand-07.svg",
+    symbol: 'APPL',
+    companyName: 'Apple, Inc',
+    price: '$4,523.00',
+    change: '3.12%',
+    changeDirection: 'up',
+    brandImage: './images/brand/brand-07.svg',
   },
   {
-    symbol: "SPOT",
-    companyName: "Spotify.com",
-    price: "$11,689.00",
-    change: "9.48%",
-    changeDirection: "up",
-    brandImage: "./images/brand/brand-11.svg",
+    symbol: 'SPOT',
+    companyName: 'Spotify.com',
+    price: '$11,689.00',
+    change: '9.48%',
+    changeDirection: 'up',
+    brandImage: './images/brand/brand-11.svg',
   },
   {
-    symbol: "ABNB",
-    companyName: "Airbnb, Inc",
-    price: "$32,227.00",
-    change: "0.29%",
-    changeDirection: "down",
-    brandImage: "./images/brand/brand-12.svg",
+    symbol: 'ABNB',
+    companyName: 'Airbnb, Inc',
+    price: '$32,227.00',
+    change: '0.29%',
+    changeDirection: 'down',
+    brandImage: './images/brand/brand-12.svg',
   },
 ];
 
@@ -96,9 +96,7 @@ const WatchlistItem: React.FC<WatchlistItemProps> = ({
           <img src={brandImage} alt={companyName} />
         </div>
         <div>
-          <h3 className="text-base font-semibold text-gray-800 dark:text-white/90">
-            {symbol}
-          </h3>
+          <h3 className="text-base font-semibold text-gray-800 dark:text-white/90">{symbol}</h3>
           <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
             {companyName}
           </span>
@@ -110,12 +108,12 @@ const WatchlistItem: React.FC<WatchlistItemProps> = ({
         </h4>
         <span
           className={`flex items-center justify-end gap-1 font-medium text-theme-xs ${
-            changeDirection === "up"
-              ? "text-success-600 dark:text-success-500"
-              : "text-error-600 dark:text-error-500"
+            changeDirection === 'up'
+              ? 'text-success-600 dark:text-success-500'
+              : 'text-error-600 dark:text-error-500'
           }`}
         >
-          {changeDirection === "up" ? <ArrowUpIcon /> : <ArrowDownIcon />}
+          {changeDirection === 'up' ? <ArrowUpIcon /> : <ArrowDownIcon />}
 
           {change}
         </span>
@@ -137,18 +135,12 @@ export default function WatchList() {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-white/[0.03]">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-          My Watchlist
-        </h3>
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">My Watchlist</h3>
         <div className="relative inline-block">
           <button onClick={toggleDropdown}>
             <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300" />
           </button>
-          <Dropdown
-            isOpen={isOpen}
-            onClose={closeDropdown}
-            className="w-40 p-2"
-          >
+          <Dropdown isOpen={isOpen} onClose={closeDropdown} className="w-40 p-2">
             <DropdownItem
               onItemClick={closeDropdown}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"

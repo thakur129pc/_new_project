@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 interface TabItem {
   key: string;
@@ -7,32 +7,32 @@ interface TabItem {
 }
 
 const DefaultTab: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("overview");
+  const [activeTab, setActiveTab] = useState<string>('overview');
 
   const tabs: TabItem[] = [
     {
-      key: "overview",
-      title: "Overview",
+      key: 'overview',
+      title: 'Overview',
       content:
-        "Overview ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.",
+        'Overview ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.',
     },
     {
-      key: "notification",
-      title: "Notification",
+      key: 'notification',
+      title: 'Notification',
       content:
-        "Notification ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.",
+        'Notification ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.',
     },
     {
-      key: "analytics",
-      title: "Analytics",
+      key: 'analytics',
+      title: 'Analytics',
       content:
-        "Analytics ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.",
+        'Analytics ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.',
     },
     {
-      key: "customers",
-      title: "Customers",
+      key: 'customers',
+      title: 'Customers',
       content:
-        "Customers ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.",
+        'Customers ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.',
     },
   ];
 
@@ -47,8 +47,8 @@ const DefaultTab: React.FC = () => {
               onClick={() => setActiveTab(tab.key)}
               className={`inline-flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
                 activeTab === tab.key
-                  ? "bg-white text-gray-900 shadow-theme-xs dark:bg-white/[0.03] dark:text-white"
-                  : "bg-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                  ? 'bg-white text-gray-900 shadow-theme-xs dark:bg-white/[0.03] dark:text-white'
+                  : 'bg-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
               }`}
             >
               {tab.title}
@@ -66,11 +66,9 @@ const DefaultTab: React.FC = () => {
                 <h3 className="mb-1 text-xl font-medium text-gray-800 dark:text-white/90">
                   {tab.title}
                 </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {tab.content}
-                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{tab.content}</p>
               </div>
-            )
+            ),
         )}
       </div>
     </div>

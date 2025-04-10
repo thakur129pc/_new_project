@@ -1,5 +1,5 @@
-import React from "react";
-import { CardDescription, CardTitle } from "../../ui/card";
+import React from 'react';
+import { CardDescription, CardTitle } from '../../ui/card';
 
 export default function CardIconOne() {
   return (
@@ -23,8 +23,8 @@ export default function CardIconOne() {
         </div>
         <CardTitle>Card title</CardTitle>
         <CardDescription>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-          architecto aspernatur cum et ipsum
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto aspernatur cum
+          et ipsum
         </CardDescription>
       </div>
     </div>

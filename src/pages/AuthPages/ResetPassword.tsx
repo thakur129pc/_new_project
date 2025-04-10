@@ -1,9 +1,9 @@
-import React from "react";
-import GridShape from "../../components/common/GridShape";
-import { Link } from "react-router";
-import Label from "../../components/form/Label";
-import Input from "../../components/form/input/InputField";
-import PageMeta from "../../components/common/PageMeta";
+import React from 'react';
+import GridShape from '../../components/common/GridShape';
+import { Link } from 'react-router';
+import Label from '../../components/form/Label';
+import Input from '../../components/form/input/InputField';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function ResetPassword() {
   return (
@@ -44,8 +44,8 @@ export default function ResetPassword() {
                 Forgot Your Password?
               </h1>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Enter the email address linked to your account, and we’ll send
-                you a link to reset your password.
+                Enter the email address linked to your account, and we’ll send you a link to reset
+                your password.
               </p>
             </div>
             <div>
@@ -56,12 +56,7 @@ export default function ResetPassword() {
                     <Label>
                       Email<span className="text-error-500">*</span>
                     </Label>
-                    <Input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Enter your email"
-                    />
+                    <Input type="email" id="email" name="email" placeholder="Enter your email" />
                   </div>
 
                   {/* <!-- Button --> */}
@@ -75,10 +70,7 @@ export default function ResetPassword() {
               <div className="mt-5">
                 <p className="text-sm font-normal text-center text-gray-700 dark:text-gray-400 sm:text-start">
                   Wait, I remember my password...
-                  <Link
-                    to="#"
-                    className="text-brand-500 hover:text-brand-600 dark:text-brand-400"
-                  >
+                  <Link to="#" className="text-brand-500 hover:text-brand-600 dark:text-brand-400">
                     Click here
                   </Link>
                 </p>

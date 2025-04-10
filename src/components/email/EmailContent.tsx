@@ -1,105 +1,105 @@
-import React, { useState } from "react";
-import EmailHeader from "./EmailHeader";
-import EmailPagination from "./EmailPagination";
-import Checkbox from "../form/input/Checkbox";
+import React, { useState } from 'react';
+import EmailHeader from './EmailHeader';
+import EmailPagination from './EmailPagination';
+import Checkbox from '../form/input/Checkbox';
 
 interface Mail {
   subject: string;
   content: string;
   time: string;
-  badge?: "Important" | "Social" | "Promotional";
+  badge?: 'Important' | 'Social' | 'Promotional';
 }
 
 const mailData: Mail[] = [
   {
-    subject: "Material UI",
+    subject: 'Material UI',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "12:16 pm",
-    badge: "Important",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: '12:16 pm',
+    badge: 'Important',
   },
   {
-    subject: "Wise",
+    subject: 'Wise',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "12:16 pm",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: '12:16 pm',
   },
   {
-    subject: "Search Console",
+    subject: 'Search Console',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Apr, 24",
-    badge: "Social",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Apr, 24',
+    badge: 'Social',
   },
   {
-    subject: "Paypal",
+    subject: 'Paypal',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Apr, 30",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Apr, 30',
   },
   {
-    subject: "Google Meet",
+    subject: 'Google Meet',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Apr, 16",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Apr, 16',
   },
   {
-    subject: "Loom",
+    subject: 'Loom',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Apr, 24",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Apr, 24',
   },
   {
-    subject: "Airbnb",
+    subject: 'Airbnb',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Mar, 05",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Mar, 05',
   },
   {
-    subject: "Facebook",
+    subject: 'Facebook',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Feb, 25",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Feb, 25',
   },
   {
-    subject: "Instagram",
+    subject: 'Instagram',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Feb, 20",
-    badge: "Promotional",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Feb, 20',
+    badge: 'Promotional',
   },
   {
-    subject: "Google",
+    subject: 'Google',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Feb, 25",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Feb, 25',
   },
   {
-    subject: "FormBold",
+    subject: 'FormBold',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Jan, 22",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Jan, 22',
   },
   {
-    subject: "GrayGrids",
+    subject: 'GrayGrids',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Feb, 25",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Feb, 25',
   },
   {
-    subject: "UIdeck",
+    subject: 'UIdeck',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!",
-    time: "Feb, 15",
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolor dolore esse modi nesciunt, nobis numquam sed sequi sunt totam!',
+    time: 'Feb, 15',
   },
 ];
 
 export default function EmailContent() {
   const [checkedItems, setCheckedItems] = useState<boolean[]>(
-    new Array(mailData.length).fill(false)
+    new Array(mailData.length).fill(false),
   );
   const [starredItems, setStarredItems] = useState<boolean[]>(
-    new Array(mailData.length).fill(false)
+    new Array(mailData.length).fill(false),
   );
 
   const toggleCheck = (index: number, checked: boolean) => {
@@ -179,17 +179,15 @@ export default function EmailContent() {
 
                 {/* Middle Section */}
                 <div className="flex items-center w-3/5 gap-3">
-                  <p className="text-sm text-gray-500 truncate">
-                    {mail.content}
-                  </p>
+                  <p className="text-sm text-gray-500 truncate">{mail.content}</p>
                   {mail.badge && (
                     <span
                       className={`hidden rounded-full px-2 py-0.5 text-xs font-medium sm:inline-block ${
-                        mail.badge === "Important"
-                          ? "text-red-700 bg-red-100"
-                          : mail.badge === "Social"
-                          ? "text-green-700 bg-green-100"
-                          : "text-blue-700 bg-blue-100"
+                        mail.badge === 'Important'
+                          ? 'text-red-700 bg-red-100'
+                          : mail.badge === 'Social'
+                            ? 'text-green-700 bg-green-100'
+                            : 'text-blue-700 bg-blue-100'
                       }`}
                     >
                       {mail.badge}
@@ -199,9 +197,7 @@ export default function EmailContent() {
 
                 {/* Right Section */}
                 <div className="w-1/5 text-right">
-                  <span className="block text-xs text-gray-400">
-                    {mail.time}
-                  </span>
+                  <span className="block text-xs text-gray-400">{mail.time}</span>
                 </div>
               </div>
             ))}

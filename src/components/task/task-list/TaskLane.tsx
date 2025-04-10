@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import TaskItem from "./TaskItem";
-import { Task } from "./types/Task";
-import { HorizontaLDots } from "../../../icons";
-import { Dropdown } from "../../ui/dropdown/Dropdown";
-import { DropdownItem } from "../../ui/dropdown/DropdownItem";
+import React, { useState } from 'react';
+import TaskItem from './TaskItem';
+import { Task } from './types/Task';
+import { HorizontaLDots } from '../../../icons';
+import { Dropdown } from '../../ui/dropdown/Dropdown';
+import { DropdownItem } from '../../ui/dropdown/DropdownItem';
 
 interface TaskLaneProps {
   lane: string;
@@ -13,13 +13,7 @@ interface TaskLaneProps {
   onDragStart: (e: React.DragEvent<HTMLDivElement>, taskId: string) => void;
 }
 
-const TaskLane: React.FC<TaskLaneProps> = ({
-  lane,
-  tasks,
-  onDragOver,
-  onDrop,
-  onDragStart,
-}) => {
+const TaskLane: React.FC<TaskLaneProps> = ({ lane, tasks, onDragOver, onDrop, onDragStart }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleDropdown() {
@@ -38,13 +32,13 @@ const TaskLane: React.FC<TaskLaneProps> = ({
             className={`
     inline-flex rounded-full px-2 py-0.5 text-theme-xs font-medium 
     ${
-      lane === "todo"
-        ? "bg-gray-100 text-gray-700 dark:bg-white/[0.03] dark:text-white/80 "
-        : lane === "in-progress"
-        ? "text-warning-700 bg-warning-50 dark:bg-warning-500/15 dark:text-orange-400"
-        : lane === "completed"
-        ? "bg-success-50 text-success-700 dark:bg-success-500/15 dark:text-success-500"
-        : ""
+      lane === 'todo'
+        ? 'bg-gray-100 text-gray-700 dark:bg-white/[0.03] dark:text-white/80 '
+        : lane === 'in-progress'
+          ? 'text-warning-700 bg-warning-50 dark:bg-warning-500/15 dark:text-orange-400'
+          : lane === 'completed'
+            ? 'bg-success-50 text-success-700 dark:bg-success-500/15 dark:text-success-500'
+            : ''
     }
   `}
           >
@@ -83,11 +77,7 @@ const TaskLane: React.FC<TaskLaneProps> = ({
         </div>
       </div>
       {tasks.map((task) => (
-        <TaskItem
-          key={task.id}
-          {...task}
-          onDragStart={(e) => onDragStart(e, task.id)}
-        />
+        <TaskItem key={task.id} {...task} onDragStart={(e) => onDragStart(e, task.id)} />
       ))}
     </div>
   );

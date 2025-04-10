@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Dropdown } from "./Dropdown";
-import { DropdownItem } from "./DropdownItem";
+import React, { useState } from 'react';
+import { Dropdown } from './Dropdown';
+import { DropdownItem } from './DropdownItem';
 
 export default function DropdownWithDivider() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,9 +21,7 @@ export default function DropdownWithDivider() {
       >
         Options
         <svg
-          className={`duration-200 ease-in-out stroke-current ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={`duration-200 ease-in-out stroke-current ${isOpen ? 'rotate-180' : ''}`}
           width="20"
           height="20"
           viewBox="0 0 20 20"

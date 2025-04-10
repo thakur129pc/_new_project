@@ -1,64 +1,64 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router";
-import Ecommerce from "./pages/Dashboard/Ecommerce";
-import Stocks from "./pages/Dashboard/Stocks";
-import Crm from "./pages/Dashboard/Crm";
-import Marketing from "./pages/Dashboard/Marketing";
-import Analytics from "./pages/Dashboard/Analytics";
-import AuthLayout from "./layout/AuthLayout";
-import SignIn from "./pages/AuthPages/SignIn";
-import SignUp from "./pages/AuthPages/SignUp";
-import NotFound from "./pages/OtherPage/NotFound";
-import UserProfiles from "./pages/UserProfiles";
-import Carousel from "./pages/UiElements/Carousel";
-import Maintenance from "./pages/OtherPage/Maintenance";
-import FiveZeroZero from "./pages/OtherPage/FiveZeroZero";
-import FiveZeroThree from "./pages/OtherPage/FiveZeroThree";
-import Videos from "./pages/UiElements/Videos";
-import Images from "./pages/UiElements/Images";
-import Alerts from "./pages/UiElements/Alerts";
-import Badges from "./pages/UiElements/Badges";
-import Pagination from "./pages/UiElements/Pagination";
-import Avatars from "./pages/UiElements/Avatars";
-import Buttons from "./pages/UiElements/Buttons";
-import ButtonsGroup from "./pages/UiElements/ButtonsGroup";
-import Notifications from "./pages/UiElements/Notifications";
-import LineChart from "./pages/Charts/LineChart";
-import BarChart from "./pages/Charts/BarChart";
-import PieChart from "./pages/Charts/PieChart";
-import Invoices from "./pages/Invoices";
-import ComingSoon from "./pages/OtherPage/ComingSoon";
-import FileManager from "./pages/FileManager";
-import Calendar from "./pages/Calendar";
-import BasicTables from "./pages/Tables/BasicTables";
-import DataTables from "./pages/Tables/DataTables";
-import PricingTables from "./pages/PricingTables";
-import Faqs from "./pages/Faqs";
-import Chats from "./pages/Chat/Chats";
-import FormElements from "./pages/Forms/FormElements";
-import FormLayout from "./pages/Forms/FormLayout";
-import Blank from "./pages/Blank";
-import EmailInbox from "./pages/Email/EmailInbox";
-import EmailDetails from "./pages/Email/EmailDetails";
-import TaskList from "./pages/Task/TaskList";
-import TaskKanban from "./pages/Task/TaskKanban";
-import BreadCrumb from "./pages/UiElements/BreadCrumb";
-import Cards from "./pages/UiElements/Cards";
-import Dropdowns from "./pages/UiElements/Dropdowns";
-import Links from "./pages/UiElements/Links";
-import Lists from "./pages/UiElements/Lists";
-import Popovers from "./pages/UiElements/Popovers";
-import Progressbar from "./pages/UiElements/Progressbar";
-import Ribbons from "./pages/UiElements/Ribbons";
-import Spinners from "./pages/UiElements/Spinners";
-import Tabs from "./pages/UiElements/Tabs";
-import Tooltips from "./pages/UiElements/Tooltips";
-import EmailLayout from "./components/email/EmailLayout";
-import Modals from "./pages/UiElements/Modals";
-import ResetPassword from "./pages/AuthPages/ResetPassword";
-import TwoStepVerification from "./pages/AuthPages/TwoStepVerification";
-import Success from "./pages/OtherPage/Success";
-import AppLayout from "./layout/AppLayout";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router';
+import Ecommerce from './pages/Dashboard/Ecommerce';
+import Stocks from './pages/Dashboard/Stocks';
+import Crm from './pages/Dashboard/Crm';
+import Marketing from './pages/Dashboard/Marketing';
+import Analytics from './pages/Dashboard/Analytics';
+import AuthLayout from './layout/AuthLayout';
+import SignIn from './pages/AuthPages/SignIn';
+import SignUp from './pages/AuthPages/SignUp';
+import NotFound from './pages/OtherPage/NotFound';
+import UserProfiles from './pages/UserProfiles';
+import Carousel from './pages/UiElements/Carousel';
+import Maintenance from './pages/OtherPage/Maintenance';
+import FiveZeroZero from './pages/OtherPage/FiveZeroZero';
+import FiveZeroThree from './pages/OtherPage/FiveZeroThree';
+import Videos from './pages/UiElements/Videos';
+import Images from './pages/UiElements/Images';
+import Alerts from './pages/UiElements/Alerts';
+import Badges from './pages/UiElements/Badges';
+import Pagination from './pages/UiElements/Pagination';
+import Avatars from './pages/UiElements/Avatars';
+import Buttons from './pages/UiElements/Buttons';
+import ButtonsGroup from './pages/UiElements/ButtonsGroup';
+import Notifications from './pages/UiElements/Notifications';
+import LineChart from './pages/Charts/LineChart';
+import BarChart from './pages/Charts/BarChart';
+import PieChart from './pages/Charts/PieChart';
+import Invoices from './pages/Invoices';
+import ComingSoon from './pages/OtherPage/ComingSoon';
+import FileManager from './pages/FileManager';
+import Calendar from './pages/Calendar';
+import BasicTables from './pages/Tables/BasicTables';
+import DataTables from './pages/Tables/DataTables';
+import PricingTables from './pages/PricingTables';
+import Faqs from './pages/Faqs';
+import Chats from './pages/Chat/Chats';
+import FormElements from './pages/Forms/FormElements';
+import FormLayout from './pages/Forms/FormLayout';
+import Blank from './pages/Blank';
+import EmailInbox from './pages/Email/EmailInbox';
+import EmailDetails from './pages/Email/EmailDetails';
+import TaskList from './pages/Task/TaskList';
+import TaskKanban from './pages/Task/TaskKanban';
+import BreadCrumb from './pages/UiElements/BreadCrumb';
+import Cards from './pages/UiElements/Cards';
+import Dropdowns from './pages/UiElements/Dropdowns';
+import Links from './pages/UiElements/Links';
+import Lists from './pages/UiElements/Lists';
+import Popovers from './pages/UiElements/Popovers';
+import Progressbar from './pages/UiElements/Progressbar';
+import Ribbons from './pages/UiElements/Ribbons';
+import Spinners from './pages/UiElements/Spinners';
+import Tabs from './pages/UiElements/Tabs';
+import Tooltips from './pages/UiElements/Tooltips';
+import EmailLayout from './components/email/EmailLayout';
+import Modals from './pages/UiElements/Modals';
+import ResetPassword from './pages/AuthPages/ResetPassword';
+import TwoStepVerification from './pages/AuthPages/TwoStepVerification';
+import Success from './pages/OtherPage/Success';
+import AppLayout from './layout/AppLayout';
 
 export default function App() {
   return (
@@ -137,10 +137,7 @@ export default function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/reset-password" element={<ResetPassword />} />
-            <Route
-              path="/two-step-verification"
-              element={<TwoStepVerification />}
-            />
+            <Route path="/two-step-verification" element={<TwoStepVerification />} />
           </Route>
 
           {/* Fallback Route */}

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import RadioSm from "../form/input/RadioSm";
+import React, { useState } from 'react';
+import RadioSm from '../form/input/RadioSm';
 
 export default function ListWithRadio() {
-  const [selectedValue, setSelectedValue] = useState<string>("option1");
+  const [selectedValue, setSelectedValue] = useState<string>('option1');
 
   const handleChange = (value: string) => {
     setSelectedValue(value);
-    console.log("Selected Value:", value);
+    console.log('Selected Value:', value);
   };
   return (
     <div className="rounded-lg border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03] sm:w-fit">
@@ -16,7 +16,7 @@ export default function ListWithRadio() {
             id="option1"
             name="example"
             value="option1"
-            checked={selectedValue === "option1"}
+            checked={selectedValue === 'option1'}
             label="Lorem ipsum dolor sit amet"
             onChange={handleChange}
           />
@@ -26,7 +26,7 @@ export default function ListWithRadio() {
             id="option2"
             name="example"
             value="option2"
-            checked={selectedValue === "option2"}
+            checked={selectedValue === 'option2'}
             label="It is a long established fact reader"
             onChange={handleChange}
           />
@@ -36,7 +36,7 @@ export default function ListWithRadio() {
             id="option3"
             name="example"
             value="option3"
-            checked={selectedValue === "option3"}
+            checked={selectedValue === 'option3'}
             label="Lorem ipsum dolor sit amet"
             onChange={handleChange}
           />
@@ -46,7 +46,7 @@ export default function ListWithRadio() {
             id="option4"
             name="example"
             value="option4"
-            checked={selectedValue === "option4"}
+            checked={selectedValue === 'option4'}
             label="Lorem ipsum dolor sit amet"
             onChange={handleChange}
           />
@@ -56,7 +56,7 @@ export default function ListWithRadio() {
             id="option5"
             name="example"
             value="option5"
-            checked={selectedValue === "option5"}
+            checked={selectedValue === 'option5'}
             label="Lorem ipsum dolor sit amet"
             onChange={handleChange}
           />

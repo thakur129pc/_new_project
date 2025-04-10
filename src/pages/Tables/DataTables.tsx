@@ -1,11 +1,11 @@
-import React from "react";
-import PageBreadcrumb from "../../components/common/PageBreadCrumb";
-import ComponentCard from "../../components/common/ComponentCard";
+import React from 'react';
+import PageBreadcrumb from '../../components/common/PageBreadCrumb';
+import ComponentCard from '../../components/common/ComponentCard';
 
-import PageMeta from "../../components/common/PageMeta";
-import DataTableOne from "../../components/tables/DataTables/TableOne/DataTableOne";
-import DataTableTwo from "../../components/tables/DataTables/TableTwo/DataTableTwo";
-import DataTableThree from "../../components/tables/DataTables/TableThree/DataTableThree";
+import PageMeta from '../../components/common/PageMeta';
+import DataTableOne from '../../components/tables/DataTables/TableOne/DataTableOne';
+import DataTableTwo from '../../components/tables/DataTables/TableTwo/DataTableTwo';
+import DataTableThree from '../../components/tables/DataTables/TableThree/DataTableThree';
 
 export default function DataTables() {
   return (

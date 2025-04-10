@@ -1,9 +1,9 @@
-import React from "react";
-import ComponentCard from "../../common/ComponentCard";
-import DefaultProgressbarExample from "./DefaultProgressbarExample";
-import ProgressBarInMultipleSizes from "./ProgressBarInMultipleSizes";
-import ProgressBarWithOutsideLabel from "./ProgressBarWithOutsideLabel";
-import ProgressBarWithInsideLabel from "./ProgressBarWithInsideLabel";
+import React from 'react';
+import ComponentCard from '../../common/ComponentCard';
+import DefaultProgressbarExample from './DefaultProgressbarExample';
+import ProgressBarInMultipleSizes from './ProgressBarInMultipleSizes';
+import ProgressBarWithOutsideLabel from './ProgressBarWithOutsideLabel';
+import ProgressBarWithInsideLabel from './ProgressBarWithInsideLabel';
 
 export default function ProgressBarExample() {
   return (

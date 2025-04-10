@@ -1,12 +1,12 @@
-import React from "react";
-import ComponentCard from "../../common/ComponentCard";
-import Form from "../Form";
-import Input from "../input/InputField";
-import Button from "../../ui/button/Button";
+import React from 'react';
+import ComponentCard from '../../common/ComponentCard';
+import Form from '../Form';
+import Input from '../input/InputField';
+import Button from '../../ui/button/Button';
 
 export default function BasicForm() {
   const handleSubmit = (e: React.FormEvent) => {
-    console.log("Form submitted:");
+    console.log('Form submitted:');
   };
   return (
     <ComponentCard title="Basic Form">

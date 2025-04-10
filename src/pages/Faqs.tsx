@@ -1,9 +1,9 @@
-import PageBreadcrumb from "../components/common/PageBreadCrumb";
-import ComponentCard from "../components/common/ComponentCard";
-import FaqsOne from "../components/UiExample/FaqsExample/FaqsOne";
-import FaqsTwo from "../components/UiExample/FaqsExample/FaqsTwo";
-import FaqsThree from "../components/UiExample/FaqsExample/FaqsThree";
-import PageMeta from "../components/common/PageMeta";
+import PageBreadcrumb from '../components/common/PageBreadCrumb';
+import ComponentCard from '../components/common/ComponentCard';
+import FaqsOne from '../components/UiExample/FaqsExample/FaqsOne';
+import FaqsTwo from '../components/UiExample/FaqsExample/FaqsTwo';
+import FaqsThree from '../components/UiExample/FaqsExample/FaqsThree';
+import PageMeta from '../components/common/PageMeta';
 
 export default function Faqs() {
   return (

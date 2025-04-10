@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface FaqTwoProps {
   title: string;
@@ -7,28 +7,19 @@ interface FaqTwoProps {
   toggleAccordionTwo: () => void;
 }
 
-const FaqTwo: React.FC<FaqTwoProps> = ({
-  title,
-  content,
-  isOpen,
-  toggleAccordionTwo,
-}) => {
+const FaqTwo: React.FC<FaqTwoProps> = ({ title, content, isOpen, toggleAccordionTwo }) => {
   return (
-    <div
-      className={`overflow-hidden rounded-xl ${isOpen ? "bg-brand-50" : ""}`}
-    >
+    <div className={`overflow-hidden rounded-xl ${isOpen ? 'bg-brand-50' : ''}`}>
       {/* Header */}
       <div
         onClick={toggleAccordionTwo}
         className={`flex cursor-pointer items-center justify-between px-6 py-4 ${
-          isOpen
-            ? "bg-brand-50 dark:bg-brand-100"
-            : "bg-gray-100 dark:bg-white/[0.03]"
+          isOpen ? 'bg-brand-50 dark:bg-brand-100' : 'bg-gray-100 dark:bg-white/[0.03]'
         }`}
       >
         <h4
           className={`text-lg font-medium ${
-            isOpen ? "text-gray-800" : "text-gray-800 dark:text-white/90"
+            isOpen ? 'text-gray-800' : 'text-gray-800 dark:text-white/90'
           }`}
         >
           {title}
@@ -36,9 +27,7 @@ const FaqTwo: React.FC<FaqTwoProps> = ({
 
         <button
           className={`duration-200 ${
-            isOpen
-              ? "text-gray-800 dark:text-gray-800"
-              : "text-gray-500 dark:text-gray-400"
+            isOpen ? 'text-gray-800 dark:text-gray-800' : 'text-gray-500 dark:text-gray-400'
           }`}
         >
           {isOpen ? (

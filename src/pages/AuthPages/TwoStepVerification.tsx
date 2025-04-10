@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
-import GridShape from "../../components/common/GridShape";
-import { Link } from "react-router";
-import Label from "../../components/form/Label";
-import PageMeta from "../../components/common/PageMeta";
+import React, { useRef, useState } from 'react';
+import GridShape from '../../components/common/GridShape';
+import { Link } from 'react-router';
+import Label from '../../components/form/Label';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function TwoStepVerification() {
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const inputsRef = useRef<HTMLInputElement[]>([]);
 
   const handleChange = (value: string, index: number) => {
@@ -21,11 +21,8 @@ export default function TwoStepVerification() {
     }
   };
 
-  const handleKeyDown = (
-    event: React.KeyboardEvent<HTMLInputElement>,
-    index: number
-  ) => {
-    if (event.key === "Backspace") {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>, index: number) => {
+    if (event.key === 'Backspace') {
       const updatedOtp = [...otp];
 
       // If current input is empty, move focus to the previous input
@@ -34,15 +31,15 @@ export default function TwoStepVerification() {
       }
 
       // Clear the current input
-      updatedOtp[index] = "";
+      updatedOtp[index] = '';
       setOtp(updatedOtp);
     }
 
-    if (event.key === "ArrowLeft" && index > 0) {
+    if (event.key === 'ArrowLeft' && index > 0) {
       inputsRef.current[index - 1].focus();
     }
 
-    if (event.key === "ArrowRight" && index < inputsRef.current.length - 1) {
+    if (event.key === 'ArrowRight' && index < inputsRef.current.length - 1) {
       inputsRef.current[index + 1].focus();
     }
   };
@@ -51,7 +48,7 @@ export default function TwoStepVerification() {
     event.preventDefault();
 
     // Get the pasted text
-    const pasteData = event.clipboardData.getData("text").slice(0, 6).split("");
+    const pasteData = event.clipboardData.getData('text').slice(0, 6).split('');
 
     // Update OTP with the pasted data
     const updatedOtp = [...otp];
@@ -71,7 +68,7 @@ export default function TwoStepVerification() {
   };
 
   const handleSubmit = () => {
-    alert(`Submitted OTP: ${otp.join("")}`);
+    alert(`Submitted OTP: ${otp.join('')}`);
   };
   return (
     <>
@@ -111,8 +108,8 @@ export default function TwoStepVerification() {
                 Two Step Verification
               </h1>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                A verification code has been sent to your mobile. Please enter
-                it in the field below.
+                A verification code has been sent to your mobile. Please enter it in the field
+                below.
               </p>
             </div>
             <div>
@@ -151,11 +148,8 @@ export default function TwoStepVerification() {
               </form>
               <div className="mt-5">
                 <p className="text-sm font-normal text-center text-gray-700 dark:text-gray-400 sm:text-start">
-                  Didn’t get the code?{" "}
-                  <Link
-                    to="/"
-                    className="text-brand-500 hover:text-brand-600 dark:text-brand-400"
-                  >
+                  Didn’t get the code?{' '}
+                  <Link to="/" className="text-brand-500 hover:text-brand-600 dark:text-brand-400">
                     Resend
                   </Link>
                 </p>

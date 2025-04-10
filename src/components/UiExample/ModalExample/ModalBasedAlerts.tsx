@@ -1,7 +1,7 @@
-import React from "react";
-import ComponentCard from "../../common/ComponentCard";
-import { useModal } from "../../../hooks/useModal";
-import { Modal } from "../../ui/modal";
+import React from 'react';
+import ComponentCard from '../../common/ComponentCard';
+import { useModal } from '../../../hooks/useModal';
+import { Modal } from '../../ui/modal';
 
 export default function ModalBasedAlerts() {
   const successModal = useModal();
@@ -81,8 +81,8 @@ export default function ModalBasedAlerts() {
             Well Done!
           </h4>
           <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur. Feugiat ipsum libero tempor
-            felis risus nisi non. Quisque eu ut tempor curabitur.
+            Lorem ipsum dolor sit amet consectetur. Feugiat ipsum libero tempor felis risus nisi
+            non. Quisque eu ut tempor curabitur.
           </p>
 
           <div className="flex items-center justify-center w-full gap-3 mt-7">
@@ -141,8 +141,8 @@ export default function ModalBasedAlerts() {
             Information Alert!
           </h4>
           <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur. Feugiat ipsum libero tempor
-            felis risus nisi non. Quisque eu ut tempor curabitur.
+            Lorem ipsum dolor sit amet consectetur. Feugiat ipsum libero tempor felis risus nisi
+            non. Quisque eu ut tempor curabitur.
           </p>
 
           <div className="flex items-center justify-center w-full gap-3 mt-7">
@@ -201,8 +201,8 @@ export default function ModalBasedAlerts() {
             Warning Alert!
           </h4>
           <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur. Feugiat ipsum libero tempor
-            felis risus nisi non. Quisque eu ut tempor curabitur.
+            Lorem ipsum dolor sit amet consectetur. Feugiat ipsum libero tempor felis risus nisi
+            non. Quisque eu ut tempor curabitur.
           </p>
 
           <div className="flex items-center justify-center w-full gap-3 mt-7">
@@ -261,8 +261,8 @@ export default function ModalBasedAlerts() {
             Danger Alert!
           </h4>
           <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur. Feugiat ipsum libero tempor
-            felis risus nisi non. Quisque eu ut tempor curabitur.
+            Lorem ipsum dolor sit amet consectetur. Feugiat ipsum libero tempor felis risus nisi
+            non. Quisque eu ut tempor curabitur.
           </p>
 
           <div className="flex items-center justify-center w-full gap-3 mt-7">

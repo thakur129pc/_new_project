@@ -1,22 +1,18 @@
-import React from "react";
-import { Card, CardDescription, CardTitle } from "../../ui/card";
-import { Link } from "react-router";
+import React from 'react';
+import { Card, CardDescription, CardTitle } from '../../ui/card';
+import { Link } from 'react-router';
 
 export default function CardThree() {
   return (
     <Card>
       <div className="mb-5 overflow-hidden rounded-lg">
-        <img
-          src="/images/cards/card-03.png"
-          alt="card"
-          className="overflow-hidden rounded-lg"
-        />
+        <img src="/images/cards/card-03.png" alt="card" className="overflow-hidden rounded-lg" />
       </div>
       <div>
         <CardTitle>Card title</CardTitle>
         <CardDescription>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-          architecto aspernatur cum et ipsum
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto aspernatur cum
+          et ipsum
         </CardDescription>
         <Link
           to="/"

@@ -1,10 +1,10 @@
-import React from "react";
-import PageBreadcrumb from "../components/common/PageBreadCrumb";
-import ComponentCard from "../components/common/ComponentCard";
-import PriceTableOne from "../components/price-table/PriceTableOne";
-import PriceTableThree from "../components/price-table/PriceTableThree";
-import PriceTableTwo from "../components/price-table/PriceTableTwo";
-import PageMeta from "../components/common/PageMeta";
+import React from 'react';
+import PageBreadcrumb from '../components/common/PageBreadCrumb';
+import ComponentCard from '../components/common/ComponentCard';
+import PriceTableOne from '../components/price-table/PriceTableOne';
+import PriceTableThree from '../components/price-table/PriceTableThree';
+import PriceTableTwo from '../components/price-table/PriceTableTwo';
+import PageMeta from '../components/common/PageMeta';
 
 export default function PricingTables() {
   return (

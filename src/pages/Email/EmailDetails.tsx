@@ -1,7 +1,7 @@
-import React from "react";
-import EmailDetailsHeader from "../../components/email/EmailDetailsHeader";
-import EmailDetailsBottom from "../../components/email/EmailDetailsBottom";
-import PageMeta from "../../components/common/PageMeta";
+import React from 'react';
+import EmailDetailsHeader from '../../components/email/EmailDetailsHeader';
+import EmailDetailsBottom from '../../components/email/EmailDetailsBottom';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function EmailDetails() {
   return (
@@ -31,39 +31,36 @@ export default function EmailDetails() {
             <p className="mb-4">Hello Dear Alexander,</p>
 
             <p className="mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              ut rutrum mi. Aenean ac leo non justo suscipit consectetur. Nam
-              vestibulum eleifend magna quis porta. ipsum dolor sit amet,
-              consectetur adipiscing elit. Praesent ut rutrum mi. Aenean ac leo
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut rutrum mi. Aenean
+              ac leo non justo suscipit consectetur. Nam vestibulum eleifend magna quis porta. ipsum
+              dolor sit amet, consectetur adipiscing elit. Praesent ut rutrum mi. Aenean ac leo
             </p>
 
             <p className="mb-4">
-              Praesent ut rutrum mi. Aenean ac leo non justo suscipit
-              consectetur. Nam vestibulum eleifend magna quis porta.
+              Praesent ut rutrum mi. Aenean ac leo non justo suscipit consectetur. Nam vestibulum
+              eleifend magna quis porta.
             </p>
 
             <p className="mb-4">
-              Nullam tincidunt sodales diam, quis rhoncus dolor aliquet a. Nulla
-              a rhoncus lectus. In nunc neque, pellentesque non massa ornare,
-              accumsan ornare massa. odales diam, quis rhoncus dolor aliquet a.
-              Nulla a rhoncus lectus. In nunc neque
+              Nullam tincidunt sodales diam, quis rhoncus dolor aliquet a. Nulla a rhoncus lectus.
+              In nunc neque, pellentesque non massa ornare, accumsan ornare massa. odales diam, quis
+              rhoncus dolor aliquet a. Nulla a rhoncus lectus. In nunc neque
             </p>
 
             <p className="mb-4">
-              Suspendisse semper vel turpis vitae aliquam. Aenean semper dui in
-              consequat ullamcorper.
+              Suspendisse semper vel turpis vitae aliquam. Aenean semper dui in consequat
+              ullamcorper.
             </p>
 
             <p className="mb-4">
-              Nullam tincidunt sodales diam, quis rhoncus dolor aliquet a. Nulla
-              a rhoncus lectus. In nunc neque, pellentesque non massa ornare,
-              accumsan ornare massa. sodales diam, quis rhoncus dolor aliquet a.
-              Nulla a rhoncus lectus. In nunc neque
+              Nullam tincidunt sodales diam, quis rhoncus dolor aliquet a. Nulla a rhoncus lectus.
+              In nunc neque, pellentesque non massa ornare, accumsan ornare massa. sodales diam,
+              quis rhoncus dolor aliquet a. Nulla a rhoncus lectus. In nunc neque
             </p>
 
             <p>
-              Praesent ut rutrum mi. Aenean ac leo non justo suscipit
-              consectetur. Nam vestibulum eleifend magna quis porta.
+              Praesent ut rutrum mi. Aenean ac leo non justo suscipit consectetur. Nam vestibulum
+              eleifend magna quis porta.
             </p>
           </div>
 
@@ -87,9 +84,7 @@ export default function EmailDetails() {
                 </svg>
               </span>
 
-              <span className="text-sm text-gray-700 dark:text-gray-400">
-                2 Attachments
-              </span>
+              <span className="text-sm text-gray-700 dark:text-gray-400">2 Attachments</span>
             </div>
 
             <div className="flex flex-col items-center gap-3 sm:flex-row">
@@ -102,13 +97,9 @@ export default function EmailDetails() {
                     Guidelines.pdf
                   </p>
                   <span className="flex items-center gap-1.5">
-                    <span className="text-gray-500 text-theme-xs dark:text-gray-400">
-                      PDF
-                    </span>
+                    <span className="text-gray-500 text-theme-xs dark:text-gray-400">PDF</span>
                     <span className="inline-block w-1 h-1 bg-gray-400 rounded-full"></span>
-                    <span className="text-gray-500 text-theme-xs dark:text-gray-400">
-                      Download
-                    </span>
+                    <span className="text-gray-500 text-theme-xs dark:text-gray-400">Download</span>
                   </span>
                 </div>
               </div>
@@ -122,13 +113,9 @@ export default function EmailDetails() {
                     Branding Assets
                   </p>
                   <span className="flex items-center gap-1.5">
-                    <span className="text-gray-500 text-theme-xs dark:text-gray-400">
-                      Media
-                    </span>
+                    <span className="text-gray-500 text-theme-xs dark:text-gray-400">Media</span>
                     <span className="inline-block w-1 h-1 bg-gray-400 rounded-full"></span>
-                    <span className="text-gray-500 text-theme-xs dark:text-gray-400">
-                      Download
-                    </span>
+                    <span className="text-gray-500 text-theme-xs dark:text-gray-400">Download</span>
                   </span>
                 </div>
               </div>

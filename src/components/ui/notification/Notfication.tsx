@@ -1,14 +1,8 @@
-import React, { useState } from "react";
-import {
-  AlertIcon,
-  CheckCircleIcon,
-  CloseIcon,
-  ErrorIcon,
-  InfoIcon,
-} from "../../../icons";
+import React, { useState } from 'react';
+import { AlertIcon, CheckCircleIcon, CloseIcon, ErrorIcon, InfoIcon } from '../../../icons';
 
 interface NotificationProps {
-  variant: "success" | "info" | "warning" | "error"; // Notification type
+  variant: 'success' | 'info' | 'warning' | 'error'; // Notification type
   title: string; // Title text
   description?: string; // Optional description
   hideDuration?: number; // Time in milliseconds to hide the notification (default: 5000ms)
@@ -25,23 +19,23 @@ const Notification: React.FC<NotificationProps> = ({
   // Styling configuration for each alert type
   const variantStyles = {
     success: {
-      borderColor: "border-success-500",
-      iconBg: "bg-success-50 text-success-500",
+      borderColor: 'border-success-500',
+      iconBg: 'bg-success-50 text-success-500',
       icon: <CheckCircleIcon />,
     },
     info: {
-      borderColor: "border-blue-light-500",
-      iconBg: "bg-blue-light-50 text-blue-light-500",
+      borderColor: 'border-blue-light-500',
+      iconBg: 'bg-blue-light-50 text-blue-light-500',
       icon: <InfoIcon />,
     },
     warning: {
-      borderColor: "border-warning-500",
-      iconBg: "bg-warning-50 text-warning-500",
+      borderColor: 'border-warning-500',
+      iconBg: 'bg-warning-50 text-warning-500',
       icon: <AlertIcon />,
     },
     error: {
-      borderColor: "border-error-500",
-      iconBg: "bg-error-50 text-error-500",
+      borderColor: 'border-error-500',
+      iconBg: 'bg-error-50 text-error-500',
       icon: <ErrorIcon />,
     },
   };
@@ -66,17 +60,13 @@ const Notification: React.FC<NotificationProps> = ({
     >
       <div className="flex items-center gap-4">
         {/* Icon */}
-        <div
-          className={`flex items-center justify-center w-10 h-10 rounded-lg ${iconBg}`}
-        >
+        <div className={`flex items-center justify-center w-10 h-10 rounded-lg ${iconBg}`}>
           {icon}
         </div>
 
         {/* Title and Description */}
         <div>
-          <h4 className="text-sm text-gray-800 sm:text-base dark:text-white/90">
-            {title}
-          </h4>
+          <h4 className="text-sm text-gray-800 sm:text-base dark:text-white/90">{title}</h4>
           {description && (
             <p className="mt-1 text-xs text-gray-600 sm:text-sm dark:text-white/70">
               {description}

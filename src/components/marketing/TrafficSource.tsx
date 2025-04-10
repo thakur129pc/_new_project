@@ -1,8 +1,8 @@
-import { Dropdown } from "../ui/dropdown/Dropdown";
-import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { MoreDotIcon } from "../../icons";
-import { useState } from "react";
-import { Link } from "react-router";
+import { Dropdown } from '../ui/dropdown/Dropdown';
+import { DropdownItem } from '../ui/dropdown/DropdownItem';
+import { MoreDotIcon } from '../../icons';
+import { useState } from 'react';
+import { Link } from 'react-router';
 export default function TrafficSource() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,11 +25,7 @@ export default function TrafficSource() {
           <button onClick={toggleDropdown}>
             <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300" />
           </button>
-          <Dropdown
-            isOpen={isOpen}
-            onClose={closeDropdown}
-            className="w-40 p-2"
-          >
+          <Dropdown isOpen={isOpen} onClose={closeDropdown} className="w-40 p-2">
             <DropdownItem
               onItemClick={closeDropdown}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
@@ -53,9 +49,7 @@ export default function TrafficSource() {
               <img src="/images/brand/brand-05.svg" alt="brand" />
             </div>
             <div>
-              <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-300">
-                Google
-              </p>
+              <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-300">Google</p>
             </div>
           </div>
 
@@ -63,9 +57,7 @@ export default function TrafficSource() {
             <div className="relative block h-2 w-full max-w-[100px] rounded bg-gray-200 dark:bg-gray-800">
               <div className="absolute left-0 top-0 flex h-full w-[79%] items-center justify-center rounded bg-brand-500 text-xs font-medium text-white"></div>
             </div>
-            <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-              79%
-            </p>
+            <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">79%</p>
           </div>
         </div>
 
@@ -75,9 +67,7 @@ export default function TrafficSource() {
               <img src="/images/brand/brand-06.svg" alt="brand" />
             </div>
             <div>
-              <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-300">
-                Youtube
-              </p>
+              <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-300">Youtube</p>
             </div>
           </div>
 
@@ -85,9 +75,7 @@ export default function TrafficSource() {
             <div className="relative block h-2 w-full max-w-[100px] rounded bg-gray-200 dark:bg-gray-800">
               <div className="absolute left-0 top-0 flex h-full w-[55%] items-center justify-center rounded bg-brand-500 text-xs font-medium text-white"></div>
             </div>
-            <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-              55%
-            </p>
+            <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">55%</p>
           </div>
         </div>
 
@@ -97,9 +85,7 @@ export default function TrafficSource() {
               <img src="/images/brand/brand-02.svg" alt="brand" />
             </div>
             <div>
-              <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-300">
-                Facebook
-              </p>
+              <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-300">Facebook</p>
             </div>
           </div>
 
@@ -107,9 +93,7 @@ export default function TrafficSource() {
             <div className="relative block h-2 w-full max-w-[100px] rounded bg-gray-200 dark:bg-gray-800">
               <div className="absolute left-0 top-0 flex h-full w-[48%] items-center justify-center rounded bg-brand-500 text-xs font-medium text-white"></div>
             </div>
-            <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-              48%
-            </p>
+            <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">48%</p>
           </div>
         </div>
 
@@ -129,9 +113,7 @@ export default function TrafficSource() {
             <div className="relative block h-2 w-full max-w-[100px] rounded bg-gray-200 dark:bg-gray-800">
               <div className="absolute left-0 top-0 flex h-full w-[48%] items-center justify-center rounded bg-brand-500 text-xs font-medium text-white"></div>
             </div>
-            <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-              48%
-            </p>
+            <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">48%</p>
           </div>
         </div>
       </div>

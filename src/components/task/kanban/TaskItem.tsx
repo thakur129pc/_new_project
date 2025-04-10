@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import { useDrag, useDrop } from "react-dnd";
-import { Task, DropResult } from "./types/types";
+import React, { useRef } from 'react';
+import { useDrag, useDrop } from 'react-dnd';
+import { Task, DropResult } from './types/types';
 
 interface TaskItemProps {
   task: Task;
@@ -9,20 +9,11 @@ interface TaskItemProps {
   changeTaskStatus: (taskId: string, newStatus: string) => void;
 }
 
-const TaskItem: React.FC<TaskItemProps> = ({
-  task,
-  index,
-  moveTask,
-  changeTaskStatus,
-}) => {
+const TaskItem: React.FC<TaskItemProps> = ({ task, index, moveTask, changeTaskStatus }) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  const [{ handlerId }, drop] = useDrop<
-    Task,
-    DropResult,
-    { handlerId: string | symbol | null }
-  >({
-    accept: "task",
+  const [{ handlerId }, drop] = useDrop<Task, DropResult, { handlerId: string | symbol | null }>({
+    accept: 'task',
     collect(monitor) {
       return {
         handlerId: monitor.getHandlerId(),
@@ -41,8 +32,7 @@ const TaskItem: React.FC<TaskItemProps> = ({
       }
 
       const hoverBoundingRect = ref.current?.getBoundingClientRect();
-      const hoverMiddleY =
-        (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+      const hoverMiddleY = (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
       const clientOffset = monitor.getClientOffset();
       const hoverClientY = clientOffset!.y - hoverBoundingRect.top;
 
@@ -59,12 +49,8 @@ const TaskItem: React.FC<TaskItemProps> = ({
     },
   });
 
-  const [{ isDragging }, drag] = useDrag<
-    Task,
-    DropResult,
-    { isDragging: boolean }
-  >({
-    type: "task",
+  const [{ isDragging }, drag] = useDrag<Task, DropResult, { isDragging: boolean }>({
+    type: 'task',
     item: () => {
       return { ...task, index };
     },
@@ -91,13 +77,9 @@ const TaskItem: React.FC<TaskItemProps> = ({
     >
       <div className="space-y-4">
         <div>
-          <h4 className="mb-5 mr-10 text-base text-gray-800 dark:text-white/90">
-            {task.title}
-          </h4>
+          <h4 className="mb-5 mr-10 text-base text-gray-800 dark:text-white/90">{task.title}</h4>
           {task.projectDesc && (
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              {task.projectDesc}
-            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">{task.projectDesc}</p>
           )}
           {task.projectImg && (
             <div className="my-4">
@@ -168,7 +150,7 @@ const TaskItem: React.FC<TaskItemProps> = ({
           </div>
           <span
             className={`mt-3 inline-flex rounded-full px-2 py-0.5 text-theme-xs font-medium ${getCategoryStyles(
-              task.category.color
+              task.category.color,
             )}`}
           >
             {task.category.name}
@@ -184,18 +166,18 @@ const TaskItem: React.FC<TaskItemProps> = ({
 
 const getCategoryStyles = (color: string) => {
   switch (color) {
-    case "error":
-      return "bg-error-50 text-error-700 dark:bg-error-500/15 dark:text-error-400";
-    case "success":
-      return "bg-success-50 text-success-700 dark:bg-success-500/15 dark:text-success-400";
-    case "brand":
-      return "bg-brand-50 text-brand-700 dark:bg-brand-500/15 dark:text-brand-400";
-    case "orange":
-      return "bg-orange-50 text-orange-700 dark:bg-orange-500/15 dark:text-orange-400";
-    case "purple":
-      return "bg-purple-50 text-purple-700 dark:bg-purple-500/15 dark:text-purple-400";
+    case 'error':
+      return 'bg-error-50 text-error-700 dark:bg-error-500/15 dark:text-error-400';
+    case 'success':
+      return 'bg-success-50 text-success-700 dark:bg-success-500/15 dark:text-success-400';
+    case 'brand':
+      return 'bg-brand-50 text-brand-700 dark:bg-brand-500/15 dark:text-brand-400';
+    case 'orange':
+      return 'bg-orange-50 text-orange-700 dark:bg-orange-500/15 dark:text-orange-400';
+    case 'purple':
+      return 'bg-purple-50 text-purple-700 dark:bg-purple-500/15 dark:text-purple-400';
     default:
-      return "bg-gray-100 text-gray-700 dark:bg-gray-500/15 dark:text-gray-400";
+      return 'bg-gray-100 text-gray-700 dark:bg-gray-500/15 dark:text-gray-400';
   }
 };
 

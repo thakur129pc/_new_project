@@ -1,8 +1,8 @@
-import React from "react";
-import ComponentCard from "../../common/ComponentCard";
-import DefaultTooltip from "./DefaultTooltip";
-import WhiteAndDarkTooltip from "./WhiteAndDarkTooltip";
-import TooltipPlacement from "./TooltipPlacement";
+import React from 'react';
+import ComponentCard from '../../common/ComponentCard';
+import DefaultTooltip from './DefaultTooltip';
+import WhiteAndDarkTooltip from './WhiteAndDarkTooltip';
+import TooltipPlacement from './TooltipPlacement';
 
 export default function TooltipExample() {
   return (

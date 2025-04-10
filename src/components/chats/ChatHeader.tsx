@@ -1,4 +1,4 @@
-import ChatHeaderTitle from "./ChatHeaderTitle";
+import ChatHeaderTitle from './ChatHeaderTitle';
 
 interface ChatHeaderProps {
   onToggle: () => void;

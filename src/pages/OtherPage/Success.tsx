@@ -1,7 +1,7 @@
-import React from "react";
-import GridShape from "../../components/common/GridShape";
-import { Link } from "react-router";
-import PageMeta from "../../components/common/PageMeta";
+import React from 'react';
+import GridShape from '../../components/common/GridShape';
+import { Link } from 'react-router';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function Success() {
   return (
@@ -14,11 +14,7 @@ export default function Success() {
         <GridShape />
         <div className="mx-auto w-full max-w-[274px] text-center sm:max-w-[555px]">
           <div className="mx-auto mb-10 w-full max-w-[100px] text-center sm:max-w-[160px]">
-            <img
-              src="./images/error/success.svg"
-              alt="success"
-              className="dark:hidden"
-            />
+            <img src="./images/error/success.svg" alt="success" className="dark:hidden" />
             <img
               src="./images/error/success-dark.svg"
               alt="success"
@@ -31,8 +27,8 @@ export default function Success() {
           </h1>
 
           <p className="mt-6 mb-6 text-base text-gray-700 dark:text-gray-400 sm:text-lg">
-            Awesome! your message has been sent successfully, Our support team
-            will get back to you as soon as possible.
+            Awesome! your message has been sent successfully, Our support team will get back to you
+            as soon as possible.
           </p>
 
           <Link

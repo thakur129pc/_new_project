@@ -1,15 +1,9 @@
-import React, { useState } from "react";
-import Checkbox from "../form/input/Checkbox";
+import React, { useState } from 'react';
+import Checkbox from '../form/input/Checkbox';
 
 export default function ListWithCheckbox() {
   // State to manage individual checkbox values
-  const [checkedItems, setCheckedItems] = useState<boolean[]>([
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+  const [checkedItems, setCheckedItems] = useState<boolean[]>([false, false, false, false, false]);
 
   // Handler to toggle individual checkboxes
   const handleCheckboxChange = (index: number, value: boolean) => {
@@ -22,11 +16,11 @@ export default function ListWithCheckbox() {
     <div className="rounded-lg border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03] sm:w-fit">
       <ul className="flex flex-col">
         {[
-          "Lorem ipsum dolor sit amet",
-          "It is a long established fact reader",
-          "Lorem ipsum dolor sit amet",
-          "Lorem ipsum dolor sit amet",
-          "Lorem ipsum dolor sit amet",
+          'Lorem ipsum dolor sit amet',
+          'It is a long established fact reader',
+          'Lorem ipsum dolor sit amet',
+          'Lorem ipsum dolor sit amet',
+          'Lorem ipsum dolor sit amet',
         ].map((item, index) => {
           const id = `listCheckbox${index}`; // Unique ID for each checkbox
           return (

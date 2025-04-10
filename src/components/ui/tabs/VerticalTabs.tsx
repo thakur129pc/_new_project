@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const VerticalTabs: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("overview");
+  const [activeTab, setActiveTab] = useState<string>('overview');
 
   return (
     <div className="p-6 border border-gray-200 rounded-xl dark:border-gray-800">
@@ -11,41 +11,41 @@ const VerticalTabs: React.FC = () => {
           <nav className="flex flex-row w-full sm:flex-col sm:space-y-2">
             <button
               className={`inline-flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out sm:p-3 ${
-                activeTab === "overview"
-                  ? "text-brand-500 dark:bg-brand-400/20 dark:text-brand-400 bg-brand-50"
-                  : "bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                activeTab === 'overview'
+                  ? 'text-brand-500 dark:bg-brand-400/20 dark:text-brand-400 bg-brand-50'
+                  : 'bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
               }`}
-              onClick={() => setActiveTab("overview")}
+              onClick={() => setActiveTab('overview')}
             >
               Overview
             </button>
             <button
               className={`inline-flex items-center rounded-lg px-3 py-2.5 text-sm font-medium transition-colors duration-200 ease-in-out sm:p-3 ${
-                activeTab === "notification"
-                  ? "text-brand-500 dark:bg-brand-400/20 dark:text-brand-400 bg-brand-50"
-                  : "bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                activeTab === 'notification'
+                  ? 'text-brand-500 dark:bg-brand-400/20 dark:text-brand-400 bg-brand-50'
+                  : 'bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
               }`}
-              onClick={() => setActiveTab("notification")}
+              onClick={() => setActiveTab('notification')}
             >
               Notification
             </button>
             <button
               className={`inline-flex items-center rounded-lg px-3 py-2.5 text-sm font-medium transition-colors duration-200 ease-in-out sm:p-3 ${
-                activeTab === "analytics"
-                  ? "text-brand-500 dark:bg-brand-400/20 dark:text-brand-400 bg-brand-50"
-                  : "bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                activeTab === 'analytics'
+                  ? 'text-brand-500 dark:bg-brand-400/20 dark:text-brand-400 bg-brand-50'
+                  : 'bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
               }`}
-              onClick={() => setActiveTab("analytics")}
+              onClick={() => setActiveTab('analytics')}
             >
               Analytics
             </button>
             <button
               className={`inline-flex items-center rounded-lg px-3 py-2.5 text-sm font-medium transition-colors duration-200 ease-in-out sm:p-3 ${
-                activeTab === "customers"
-                  ? "text-brand-500 dark:bg-brand-400/20 dark:text-brand-400 bg-brand-50"
-                  : "bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                activeTab === 'customers'
+                  ? 'text-brand-500 dark:bg-brand-400/20 dark:text-brand-400 bg-brand-50'
+                  : 'bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
               }`}
-              onClick={() => setActiveTab("customers")}
+              onClick={() => setActiveTab('customers')}
             >
               Customers
             </button>
@@ -54,59 +54,55 @@ const VerticalTabs: React.FC = () => {
 
         {/* Tab Content */}
         <div className="flex-1">
-          {activeTab === "overview" && (
+          {activeTab === 'overview' && (
             <div>
               <h3 className="mb-1 text-xl font-medium text-gray-800 dark:text-white/90">
                 Overview
               </h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Overview ipsum dolor sit amet consectetur. Non vitae facilisis
-                urna tortor placerat egestas donec. Faucibus diam gravida enim
-                elit lacus a. Tincidunt fermentum condimentum quis et a et
-                tempus. Tristique urna nisi nulla elit sit libero scelerisque
-                ante.
+                Overview ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat
+                egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum
+                condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero
+                scelerisque ante.
               </p>
             </div>
           )}
-          {activeTab === "notification" && (
+          {activeTab === 'notification' && (
             <div>
               <h3 className="mb-1 text-xl font-medium text-gray-800 dark:text-white/90">
                 Notification
               </h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Notification ipsum dolor sit amet consectetur. Non vitae
-                facilisis urna tortor placerat egestas donec. Faucibus diam
-                gravida enim elit lacus a. Tincidunt fermentum condimentum quis
-                et a et tempus. Tristique urna nisi nulla elit sit libero
+                Notification ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor
+                placerat egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum
+                condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero
                 scelerisque ante.
               </p>
             </div>
           )}
-          {activeTab === "analytics" && (
+          {activeTab === 'analytics' && (
             <div>
               <h3 className="mb-1 text-xl font-medium text-gray-800 dark:text-white/90">
                 Analytics
               </h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Analytics ipsum dolor sit amet consectetur. Non vitae facilisis
-                urna tortor placerat egestas donec. Faucibus diam gravida enim
-                elit lacus a. Tincidunt fermentum condimentum quis et a et
-                tempus. Tristique urna nisi nulla elit sit libero scelerisque
-                ante.
+                Analytics ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat
+                egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum
+                condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero
+                scelerisque ante.
               </p>
             </div>
           )}
-          {activeTab === "customers" && (
+          {activeTab === 'customers' && (
             <div>
               <h3 className="mb-1 text-xl font-medium text-gray-800 dark:text-white/90">
                 Customers
               </h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Customers ipsum dolor sit amet consectetur. Non vitae facilisis
-                urna tortor placerat egestas donec. Faucibus diam gravida enim
-                elit lacus a. Tincidunt fermentum condimentum quis et a et
-                tempus. Tristique urna nisi nulla elit sit libero scelerisque
-                ante.
+                Customers ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat
+                egestas donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum
+                condimentum quis et a et tempus. Tristique urna nisi nulla elit sit libero
+                scelerisque ante.
               </p>
             </div>
           )}

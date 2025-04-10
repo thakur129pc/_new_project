@@ -1,8 +1,8 @@
-import React from "react";
-import DefaultLinkExample from "./DefaultLinkExample";
-import ColoredLinkWithUnderline from "./ColoredLinkWithUnderline";
-import LinkOpacityExample from "./LinkOpacityExample";
-import LinkOpacityHover from "./LinkOpacityHover";
+import React from 'react';
+import DefaultLinkExample from './DefaultLinkExample';
+import ColoredLinkWithUnderline from './ColoredLinkWithUnderline';
+import LinkOpacityExample from './LinkOpacityExample';
+import LinkOpacityHover from './LinkOpacityHover';
 
 export default function LinksExample() {
   return (

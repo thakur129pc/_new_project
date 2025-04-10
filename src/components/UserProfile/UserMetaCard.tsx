@@ -1,15 +1,15 @@
-import React from "react";
-import { useModal } from "../../hooks/useModal";
-import { Modal } from "../ui/modal";
-import Button from "../ui/button/Button";
-import Input from "../form/input/InputField";
-import Label from "../form/Label";
+import React from 'react';
+import { useModal } from '../../hooks/useModal';
+import { Modal } from '../ui/modal';
+import Button from '../ui/button/Button';
+import Input from '../form/input/InputField';
+import Label from '../form/Label';
 
 export default function UserMetaCard() {
   const { isOpen, openModal, closeModal } = useModal();
   const handleSave = () => {
     // Handle save logic here
-    console.log("Saving changes...");
+    console.log('Saving changes...');
     closeModal();
   };
   return (
@@ -25,13 +25,9 @@ export default function UserMetaCard() {
                 Emirhan Boruch
               </h4>
               <div className="flex flex-col items-center gap-1 text-center xl:flex-row xl:gap-3 xl:text-left">
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Team Manager
-                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">Team Manager</p>
                 <div className="hidden h-3.5 w-px bg-gray-300 dark:bg-gray-700 xl:block"></div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Leeds, United Kingdom
-                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">Leeds, United Kingdom</p>
               </div>
             </div>
             <div className="flex items-center order-2 gap-2 grow xl:order-3 xl:justify-end">
@@ -143,10 +139,7 @@ export default function UserMetaCard() {
                 <div className="grid grid-cols-1 gap-x-6 gap-y-5 lg:grid-cols-2">
                   <div>
                     <Label>Facebook</Label>
-                    <Input
-                      type="text"
-                      value="https://www.facebook.com/PimjoHQ"
-                    />
+                    <Input type="text" value="https://www.facebook.com/PimjoHQ" />
                   </div>
 
                   <div>
@@ -156,10 +149,7 @@ export default function UserMetaCard() {
 
                   <div>
                     <Label>Linkedin</Label>
-                    <Input
-                      type="text"
-                      value="https://www.linkedin.com/company/pimjo"
-                    />
+                    <Input type="text" value="https://www.linkedin.com/company/pimjo" />
                   </div>
 
                   <div>

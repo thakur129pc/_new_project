@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router";
-import ComponentCard from "../../common/ComponentCard";
+import React from 'react';
+import { Link } from 'react-router';
+import ComponentCard from '../../common/ComponentCard';
 
 export default function AngleDividerBreadCrumb() {
   return (

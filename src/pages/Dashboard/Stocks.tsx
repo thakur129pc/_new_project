@@ -1,10 +1,10 @@
-import PortfolioPerformance from "../../components/charts/line/PortfolioPerformance";
-import PageMeta from "../../components/common/PageMeta";
-import DividendChart from "../../components/stocks/DividendChart";
-import LatestTransactions from "../../components/stocks/LatestTransactions";
-import StockMetricsList from "../../components/stocks/StockMetricsList";
-import TrendingStocks from "../../components/stocks/TrendingStocks";
-import WatchList from "../../components/stocks/WatchList";
+import PortfolioPerformance from '../../components/charts/line/PortfolioPerformance';
+import PageMeta from '../../components/common/PageMeta';
+import DividendChart from '../../components/stocks/DividendChart';
+import LatestTransactions from '../../components/stocks/LatestTransactions';
+import StockMetricsList from '../../components/stocks/StockMetricsList';
+import TrendingStocks from '../../components/stocks/TrendingStocks';
+import WatchList from '../../components/stocks/WatchList';
 
 export default function Stocks() {
   return (

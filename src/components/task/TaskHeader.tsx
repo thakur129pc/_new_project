@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import { Modal } from "../ui/modal";
-import { useModal } from "../../hooks/useModal";
-import Button from "../ui/button/Button";
-import Label from "../form/Label";
-import Input from "../form/input/InputField";
-import TextArea from "../form/input/TextArea";
+import React, { useState } from 'react';
+import { Modal } from '../ui/modal';
+import { useModal } from '../../hooks/useModal';
+import Button from '../ui/button/Button';
+import Label from '../form/Label';
+import Input from '../form/input/InputField';
+import TextArea from '../form/input/TextArea';
 
 export default function TaskHeader() {
-  const [selectedTaskGroup, setSelectedTaskGroup] = useState<string>("All");
+  const [selectedTaskGroup, setSelectedTaskGroup] = useState<string>('All');
   const { isOpen, openModal, closeModal } = useModal();
 
   const taskGroups = [
-    { name: "All Tasks", key: "All", count: 23 },
-    { name: "To do", key: "Todo", count: 3 },
-    { name: "In Progress", key: "InProgress", count: 6 },
-    { name: "Completed", key: "Completed", count: 14 },
+    { name: 'All Tasks', key: 'All', count: 23 },
+    { name: 'To do', key: 'Todo', count: 3 },
+    { name: 'In Progress', key: 'InProgress', count: 6 },
+    { name: 'Completed', key: 'Completed', count: 14 },
   ];
   return (
     <>
@@ -27,16 +27,16 @@ export default function TaskHeader() {
                 onClick={() => setSelectedTaskGroup(group.key)}
                 className={`inline-flex items-center xl:justify-start justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md group hover:text-gray-900 dark:hover:text-white ${
                   selectedTaskGroup === group.key
-                    ? "text-gray-900 dark:text-white bg-white dark:bg-gray-800"
-                    : "text-gray-500 dark:text-gray-400"
+                    ? 'text-gray-900 dark:text-white bg-white dark:bg-gray-800'
+                    : 'text-gray-500 dark:text-gray-400'
                 }`}
               >
                 {group.name}
                 <span
                   className={`inline-flex rounded-full px-2 py-0.5 text-xs font-medium leading-normal group-hover:bg-brand-50 group-hover:text-brand-500 dark:group-hover:bg-brand-500/15 dark:group-hover:text-brand-400 ${
                     selectedTaskGroup === group.key
-                      ? "text-brand-500 dark:text-brand-400 bg-brand-50 dark:bg-brand-500/15"
-                      : "bg-white dark:bg-white/[0.03]"
+                      ? 'text-brand-500 dark:text-brand-400 bg-brand-50 dark:bg-brand-500/15'
+                      : 'bg-white dark:bg-white/[0.03]'
                   }`}
                 >
                   {group.count}
@@ -83,11 +83,7 @@ export default function TaskHeader() {
           </div>
         </div>
       </div>
-      <Modal
-        isOpen={isOpen}
-        onClose={closeModal}
-        className="max-w-[700px] p-5 lg:p-10 m-4"
-      >
+      <Modal isOpen={isOpen} onClose={closeModal} className="max-w-[700px] p-5 lg:p-10 m-4">
         <div className="px-2">
           <h4 className="mb-2 text-2xl font-semibold text-gray-800 dark:text-white/90">
             Add a new task
@@ -133,22 +129,13 @@ export default function TaskHeader() {
                 <Label>Status</Label>
                 <div className="relative z-20 bg-transparent dark:bg-form-input">
                   <select className="dark:bg-dark-900 h-11 w-full appearance-none rounded-lg border border-gray-300 bg-transparent bg-none px-4 py-2.5 pr-11 text-sm text-gray-800 shadow-theme-xs placeholder:text-gray-400 focus:border-brand-300 focus:outline-none focus:ring focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30 dark:focus:border-brand-800">
-                    <option
-                      value=""
-                      className="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
-                    >
+                    <option value="" className="text-gray-700 dark:bg-gray-900 dark:text-gray-400">
                       To Do
                     </option>
-                    <option
-                      value=""
-                      className="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
-                    >
+                    <option value="" className="text-gray-700 dark:bg-gray-900 dark:text-gray-400">
                       In Progress
                     </option>
-                    <option
-                      value=""
-                      className="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
-                    >
+                    <option value="" className="text-gray-700 dark:bg-gray-900 dark:text-gray-400">
                       Completed
                     </option>
                   </select>
@@ -179,22 +166,13 @@ export default function TaskHeader() {
                 </Label>
                 <div className="relative z-20 bg-transparent dark:bg-form-input">
                   <select className="dark:bg-dark-900 h-11 w-full appearance-none rounded-lg border border-gray-300 bg-transparent bg-none px-4 py-2.5 pr-11 text-sm text-gray-800 shadow-theme-xs placeholder:text-gray-400 focus:border-brand-300 focus:outline-none focus:ring focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30 dark:focus:border-brand-800">
-                    <option
-                      value=""
-                      className="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
-                    >
+                    <option value="" className="text-gray-700 dark:bg-gray-900 dark:text-gray-400">
                       Marketing
                     </option>
-                    <option
-                      value=""
-                      className="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
-                    >
+                    <option value="" className="text-gray-700 dark:bg-gray-900 dark:text-gray-400">
                       Template
                     </option>
-                    <option
-                      value=""
-                      className="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
-                    >
+                    <option value="" className="text-gray-700 dark:bg-gray-900 dark:text-gray-400">
                       Development
                     </option>
                   </select>
@@ -223,22 +201,13 @@ export default function TaskHeader() {
                 <Label>Assignees</Label>
                 <div className="relative z-20 bg-transparent dark:bg-form-input">
                   <select className="dark:bg-dark-900 h-11 w-full appearance-none rounded-lg border border-gray-300 bg-transparent bg-none px-4 py-2.5 pr-11 text-sm text-gray-800 shadow-theme-xs placeholder:text-gray-400 focus:border-brand-300 focus:outline-none focus:ring focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30 dark:focus:border-brand-800">
-                    <option
-                      value=""
-                      className="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
-                    >
+                    <option value="" className="text-gray-700 dark:bg-gray-900 dark:text-gray-400">
                       Mayad Ahmed
                     </option>
-                    <option
-                      value=""
-                      className="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
-                    >
+                    <option value="" className="text-gray-700 dark:bg-gray-900 dark:text-gray-400">
                       Juhan Ahamed
                     </option>
-                    <option
-                      value=""
-                      className="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
-                    >
+                    <option value="" className="text-gray-700 dark:bg-gray-900 dark:text-gray-400">
                       Mahim Ahmed
                     </option>
                   </select>
@@ -276,10 +245,7 @@ export default function TaskHeader() {
                   Attachments
                 </span>
                 <span className="block w-px h-4 bg-gray-200 dark:bg-gray-800"></span>
-                <label
-                  htmlFor="upload-file"
-                  className="text-sm font-medium text-brand-500"
-                >
+                <label htmlFor="upload-file" className="text-sm font-medium text-brand-500">
                   Upload file
                 </label>
               </div>
@@ -312,9 +278,7 @@ export default function TaskHeader() {
                       Guidelines.pdf
                     </p>
                     <span className="flex items-center gap-1.5">
-                      <span className="text-gray-500 text-theme-xs dark:text-gray-400">
-                        PDF
-                      </span>
+                      <span className="text-gray-500 text-theme-xs dark:text-gray-400">PDF</span>
                       <span className="inline-block w-1 h-1 bg-gray-400 rounded-full"></span>
                       <span className="text-gray-500 text-theme-xs dark:text-gray-400">
                         Download
@@ -350,9 +314,7 @@ export default function TaskHeader() {
                       Branding Assets
                     </p>
                     <span className="flex items-center gap-1.5">
-                      <span className="text-gray-500 text-theme-xs dark:text-gray-400">
-                        Media
-                      </span>
+                      <span className="text-gray-500 text-theme-xs dark:text-gray-400">Media</span>
                       <span className="inline-block w-1 h-1 bg-gray-400 rounded-full"></span>
                       <span className="text-gray-500 text-theme-xs dark:text-gray-400">
                         Download
@@ -383,9 +345,7 @@ export default function TaskHeader() {
           </div>
           <div className="flex flex-col items-center gap-6 px-2 mt-6 sm:flex-row sm:justify-between">
             <div className="flex flex-col items-center gap-3 sm:flex-row">
-              <p className="text-sm text-gray-700 dark:text-gray-400">
-                Viewers:
-              </p>
+              <p className="text-sm text-gray-700 dark:text-gray-400">Viewers:</p>
               <div className="flex -space-x-2">
                 <div className="w-8 h-8 overflow-hidden border border-white rounded-full dark:border-gray-900">
                   <img src="./images/user/user-13.jpg" alt="user" />

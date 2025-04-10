@@ -1,18 +1,18 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
 const carouselData = [
   {
-    thumbnail: "/images/carousel/carousel-01.png",
+    thumbnail: '/images/carousel/carousel-01.png',
   },
   {
-    thumbnail: "/images/carousel/carousel-02.png",
+    thumbnail: '/images/carousel/carousel-02.png',
   },
   {
-    thumbnail: "/images/carousel/carousel-03.png",
+    thumbnail: '/images/carousel/carousel-03.png',
   },
   {
-    thumbnail: "/images/carousel/carousel-04.png",
+    thumbnail: '/images/carousel/carousel-04.png',
   },
 ];
 

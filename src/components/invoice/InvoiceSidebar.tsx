@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function InvoiceSidebar() {
   return (
@@ -41,9 +41,7 @@ export default function InvoiceSidebar() {
             <span className="mb-0.5 block text-sm font-medium text-gray-800 dark:text-white/90">
               Zain Geidt
             </span>
-            <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
-              ID: #348
-            </span>
+            <span className="block text-gray-500 text-theme-xs dark:text-gray-400">ID: #348</span>
           </div>
         </div>
 
@@ -56,9 +54,7 @@ export default function InvoiceSidebar() {
             <span className="mb-0.5 block text-sm font-medium text-gray-800 dark:text-white/90">
               Carla George
             </span>
-            <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
-              ID: #982
-            </span>
+            <span className="block text-gray-500 text-theme-xs dark:text-gray-400">ID: #982</span>
           </div>
         </div>
 
@@ -71,9 +67,7 @@ export default function InvoiceSidebar() {
             <span className="mb-0.5 block text-sm font-medium text-gray-800 dark:text-white/90">
               Abram Schleifer
             </span>
-            <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
-              ID: #289
-            </span>
+            <span className="block text-gray-500 text-theme-xs dark:text-gray-400">ID: #289</span>
           </div>
         </div>
 
@@ -86,9 +80,7 @@ export default function InvoiceSidebar() {
             <span className="mb-0.5 block text-sm font-medium text-gray-800 dark:text-white/90">
               Lincoln Donin
             </span>
-            <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
-              ID: #522
-            </span>
+            <span className="block text-gray-500 text-theme-xs dark:text-gray-400">ID: #522</span>
           </div>
         </div>
       </div>

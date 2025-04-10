@@ -1,10 +1,10 @@
-import React from "react";
-import PageBreadcrumb from "../components/common/PageBreadCrumb";
-import AllMediaCard from "../components/file-manager/AllMediaCard";
-import AllFolders from "../components/file-manager/AllFolders";
-import RecentFileTable from "../components/file-manager/RecentFileTable";
-import StorageDetailsChart from "../components/file-manager/StorageDetailsChart";
-import PageMeta from "../components/common/PageMeta";
+import React from 'react';
+import PageBreadcrumb from '../components/common/PageBreadCrumb';
+import AllMediaCard from '../components/file-manager/AllMediaCard';
+import AllFolders from '../components/file-manager/AllFolders';
+import RecentFileTable from '../components/file-manager/RecentFileTable';
+import StorageDetailsChart from '../components/file-manager/StorageDetailsChart';
+import PageMeta from '../components/common/PageMeta';
 
 export default function FileManager() {
   return (

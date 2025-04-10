@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type AspectRatioVideoProps = {
   videoUrl: string; // URL of the video
@@ -8,8 +8,8 @@ type AspectRatioVideoProps = {
 
 const AspectRatioVideo: React.FC<AspectRatioVideoProps> = ({
   videoUrl,
-  aspectRatio = "video", // Default aspect ratio
-  title = "Embedded Video",
+  aspectRatio = 'video', // Default aspect ratio
+  title = 'Embedded Video',
 }) => {
   return (
     <div className={`aspect-${aspectRatio} overflow-hidden rounded-lg`}>

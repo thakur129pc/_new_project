@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router";
-import GridShape from "../../components/common/GridShape";
-import Input from "../../components/form/input/InputField";
-import Label from "../../components/form/Label";
-import { EyeCloseIcon, EyeIcon } from "../../icons";
-import Checkbox from "../../components/form/input/Checkbox";
-import PageMeta from "../../components/common/PageMeta";
+import React, { useState } from 'react';
+import { Link } from 'react-router';
+import GridShape from '../../components/common/GridShape';
+import Input from '../../components/form/input/InputField';
+import Label from '../../components/form/Label';
+import { EyeCloseIcon, EyeIcon } from '../../icons';
+import Checkbox from '../../components/form/input/Checkbox';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -137,12 +137,7 @@ export default function SignUp() {
                     <Label>
                       Email<span className="text-error-500">*</span>
                     </Label>
-                    <Input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Enter your email"
-                    />
+                    <Input type="email" id="email" name="email" placeholder="Enter your email" />
                   </div>
                   {/* <!-- Password --> */}
                   <div>
@@ -152,7 +147,7 @@ export default function SignUp() {
                     <div className="relative">
                       <Input
                         placeholder="Enter your password"
-                        type={showPassword ? "text" : "password"}
+                        type={showPassword ? 'text' : 'password'}
                       />
                       <span
                         onClick={() => setShowPassword(!showPassword)}
@@ -168,20 +163,13 @@ export default function SignUp() {
                   </div>
                   {/* <!-- Checkbox --> */}
                   <div className="flex items-center gap-3">
-                    <Checkbox
-                      className="w-5 h-5"
-                      checked={isChecked}
-                      onChange={setIsChecked}
-                    />
+                    <Checkbox className="w-5 h-5" checked={isChecked} onChange={setIsChecked} />
                     <p className="inline-block font-normal text-gray-500 dark:text-gray-400">
-                      By creating an account means you agree to the{" "}
+                      By creating an account means you agree to the{' '}
                       <span className="text-gray-800 dark:text-white/90">
                         Terms and Conditions,
-                      </span>{" "}
-                      and our{" "}
-                      <span className="text-gray-800 dark:text-white">
-                        Privacy Policy
-                      </span>
+                      </span>{' '}
+                      and our <span className="text-gray-800 dark:text-white">Privacy Policy</span>
                     </p>
                   </div>
                   {/* <!-- Button --> */}

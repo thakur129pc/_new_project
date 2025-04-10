@@ -1,10 +1,10 @@
-import React from "react";
-import { ApexOptions } from "apexcharts";
-import Chart from "react-apexcharts";
-import { Dropdown } from "../ui/dropdown/Dropdown";
-import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { MoreDotIcon } from "../../icons";
-import { useState } from "react";
+import React from 'react';
+import { ApexOptions } from 'apexcharts';
+import Chart from 'react-apexcharts';
+import { Dropdown } from '../ui/dropdown/Dropdown';
+import { DropdownItem } from '../ui/dropdown/DropdownItem';
+import { MoreDotIcon } from '../../icons';
+import { useState } from 'react';
 
 export default function EstimatedRevenue() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,10 +18,10 @@ export default function EstimatedRevenue() {
   }
   // ApexCharts configuration
   const options: ApexOptions = {
-    colors: ["#465FFF"],
+    colors: ['#465FFF'],
     chart: {
-      fontFamily: "Outfit, sans-serif",
-      type: "radialBar",
+      fontFamily: 'Outfit, sans-serif',
+      type: 'radialBar',
       height: 360,
       sparkline: {
         enabled: true,
@@ -32,11 +32,11 @@ export default function EstimatedRevenue() {
         startAngle: -85,
         endAngle: 85,
         hollow: {
-          size: "80%",
+          size: '80%',
         },
         track: {
-          background: "#E4E7EC",
-          strokeWidth: "100%",
+          background: '#E4E7EC',
+          strokeWidth: '100%',
           margin: 5, // margin is in pixels
         },
         dataLabels: {
@@ -44,25 +44,25 @@ export default function EstimatedRevenue() {
             show: false,
           },
           value: {
-            fontSize: "36px",
-            fontWeight: "600",
+            fontSize: '36px',
+            fontWeight: '600',
             offsetY: -25,
-            color: "#1D2939",
+            color: '#1D2939',
             formatter: function (val) {
-              return "$" + val;
+              return '$' + val;
             },
           },
         },
       },
     },
     fill: {
-      type: "solid",
-      colors: ["#465FFF"],
+      type: 'solid',
+      colors: ['#465FFF'],
     },
     stroke: {
-      lineCap: "round",
+      lineCap: 'round',
     },
-    labels: ["June Goals"],
+    labels: ['June Goals'],
   };
   const series = [90];
   return (
@@ -81,11 +81,7 @@ export default function EstimatedRevenue() {
           <button onClick={toggleDropdown}>
             <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300" />
           </button>
-          <Dropdown
-            isOpen={isOpen}
-            onClose={closeDropdown}
-            className="w-40 p-2"
-          >
+          <Dropdown isOpen={isOpen} onClose={closeDropdown} className="w-40 p-2">
             <DropdownItem
               onItemClick={closeDropdown}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
@@ -104,12 +100,7 @@ export default function EstimatedRevenue() {
 
       <div className="relative">
         <div id="chartDarkStyle">
-          <Chart
-            options={options}
-            series={series}
-            type="radialBar"
-            height={360}
-          />
+          <Chart options={options} series={series} type="radialBar" height={360} />
         </div>
         <span className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-[60%] text-xs font-normal text-gray-500 dark:text-gray-400">
           June Goals
@@ -118,9 +109,7 @@ export default function EstimatedRevenue() {
 
       <div className="pt-6 mt-6 space-y-5 border-t border-gary-200 dark:border-gray-800">
         <div>
-          <p className="mb-2 text-gray-500 text-theme-sm dark:text-gray-400">
-            Marketing
-          </p>
+          <p className="mb-2 text-gray-500 text-theme-sm dark:text-gray-400">Marketing</p>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div>
@@ -134,17 +123,13 @@ export default function EstimatedRevenue() {
               <div className="relative block h-2 w-full max-w-[100px] rounded bg-gray-200 dark:bg-gray-800">
                 <div className="absolute left-0 top-0 flex h-full w-[85%] items-center justify-center rounded bg-brand-500 text-xs font-medium text-white"></div>
               </div>
-              <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-                85%
-              </p>
+              <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">85%</p>
             </div>
           </div>
         </div>
 
         <div>
-          <p className="mb-2 text-gray-500 text-theme-sm dark:text-gray-400">
-            Sales
-          </p>
+          <p className="mb-2 text-gray-500 text-theme-sm dark:text-gray-400">Sales</p>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div>
@@ -158,9 +143,7 @@ export default function EstimatedRevenue() {
               <div className="relative block h-2 w-full max-w-[100px] rounded bg-gray-200 dark:bg-gray-800">
                 <div className="absolute left-0 top-0 flex h-full w-[55%] items-center justify-center rounded bg-brand-500 text-xs font-medium text-white"></div>
               </div>
-              <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-                55%
-              </p>
+              <p className="font-medium text-gray-700 text-theme-sm dark:text-gray-400">55%</p>
             </div>
           </div>
         </div>

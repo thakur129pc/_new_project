@@ -1,8 +1,8 @@
-import React from "react";
-import PageBreadcrumb from "../../components/common/PageBreadCrumb";
-import ChatSidebar from "../../components/chats/ChatSidebar";
-import ChatBox from "../../components/chats/ChatBox";
-import PageMeta from "../../components/common/PageMeta";
+import React from 'react';
+import PageBreadcrumb from '../../components/common/PageBreadCrumb';
+import ChatSidebar from '../../components/chats/ChatSidebar';
+import ChatBox from '../../components/chats/ChatBox';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function Chats() {
   return (

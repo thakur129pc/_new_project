@@ -1,7 +1,7 @@
-import React from "react";
-import GridShape from "../../components/common/GridShape";
-import { Link } from "react-router";
-import PageMeta from "../../components/common/PageMeta";
+import React from 'react';
+import GridShape from '../../components/common/GridShape';
+import { Link } from 'react-router';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function Maintenance() {
   return (
@@ -19,11 +19,7 @@ export default function Maintenance() {
           </h1>
 
           <img src="./images/error/500.svg" alt="500" className="dark:hidden" />
-          <img
-            src="./images/error/500-dark.svg"
-            alt="500"
-            className="hidden dark:block"
-          />
+          <img src="./images/error/500-dark.svg" alt="500" className="hidden dark:block" />
 
           <p className="mt-10 mb-6 text-base text-gray-700 dark:text-gray-400 sm:text-lg">
             We can’t seem to find the page you are looking for!
@@ -48,11 +44,7 @@ export default function Maintenance() {
         <div>
           <div className="mx-auto w-full max-w-[274px] text-center sm:max-w-[555px]">
             <div className="mx-auto mb-10 w-full max-w-[155px] text-center sm:max-w-[204px]">
-              <img
-                src="/images/error/maintenance.svg"
-                alt="maintenance"
-                className="dark:hidden"
-              />
+              <img src="/images/error/maintenance.svg" alt="maintenance" className="dark:hidden" />
               <img
                 src="/images/error/maintenance-dark.svg"
                 alt="maintenance"
@@ -65,8 +57,7 @@ export default function Maintenance() {
             </h1>
 
             <p className="mt-6 mb-6 text-base text-gray-700 dark:text-gray-400 sm:text-lg">
-              Our Site is Currently under maintenance We will be back Shortly
-              Thank You For Patience
+              Our Site is Currently under maintenance We will be back Shortly Thank You For Patience
             </p>
 
             <Link

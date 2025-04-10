@@ -1,14 +1,8 @@
-"use client";
-import { useState } from "react";
-import Badge from "../../ui/badge/Badge";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableRow,
-} from "../../ui/table";
-import Button from "../../ui/button/Button";
+'use client';
+import { useState } from 'react';
+import Badge from '../../ui/badge/Badge';
+import { Table, TableBody, TableCell, TableHeader, TableRow } from '../../ui/table';
+import Button from '../../ui/button/Button';
 
 // Type definition for the transaction data
 interface Transaction {
@@ -17,129 +11,129 @@ interface Transaction {
   date: string;
   amount: string;
   category: string;
-  status: "Success" | "Pending" | "Failed";
+  status: 'Success' | 'Pending' | 'Failed';
 }
 
 const transactionData: Transaction[] = [
   {
-    image: "/images/brand/brand-08.svg", // Path or URL for the image
-    action: "Bought PYPL", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Success",
+    image: '/images/brand/brand-08.svg', // Path or URL for the image
+    action: 'Bought PYPL', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Success',
   },
   {
-    image: "/images/brand/brand-07.svg", // Path or URL for the image
-    action: "Bought AAPL", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Pending",
+    image: '/images/brand/brand-07.svg', // Path or URL for the image
+    action: 'Bought AAPL', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Pending',
   },
   {
-    image: "/images/brand/brand-15.svg", // Path or URL for the image
-    action: "Sell KKST", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Success",
+    image: '/images/brand/brand-15.svg', // Path or URL for the image
+    action: 'Sell KKST', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Success',
   },
   {
-    image: "/images/brand/brand-02.svg", // Path or URL for the image
-    action: "Bought FB", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Success",
+    image: '/images/brand/brand-02.svg', // Path or URL for the image
+    action: 'Bought FB', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Success',
   },
   {
-    image: "/images/brand/brand-10.svg", // Path or URL for the image
-    action: "Sell AMZN", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Failed",
+    image: '/images/brand/brand-10.svg', // Path or URL for the image
+    action: 'Sell AMZN', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Failed',
   },
   {
-    image: "/images/brand/brand-08.svg", // Path or URL for the image
-    action: "Bought PYPL", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Success",
+    image: '/images/brand/brand-08.svg', // Path or URL for the image
+    action: 'Bought PYPL', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Success',
   },
   {
-    image: "/images/brand/brand-07.svg", // Path or URL for the image
-    action: "Bought AAPL", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Pending",
+    image: '/images/brand/brand-07.svg', // Path or URL for the image
+    action: 'Bought AAPL', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Pending',
   },
   {
-    image: "/images/brand/brand-15.svg", // Path or URL for the image
-    action: "Sell KKST", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Success",
+    image: '/images/brand/brand-15.svg', // Path or URL for the image
+    action: 'Sell KKST', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Success',
   },
   {
-    image: "/images/brand/brand-02.svg", // Path or URL for the image
-    action: "Bought FB", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Success",
+    image: '/images/brand/brand-02.svg', // Path or URL for the image
+    action: 'Bought FB', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Success',
   },
   {
-    image: "/images/brand/brand-10.svg", // Path or URL for the image
-    action: "Sell AMZN", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Failed",
+    image: '/images/brand/brand-10.svg', // Path or URL for the image
+    action: 'Sell AMZN', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Failed',
   },
   {
-    image: "/images/brand/brand-08.svg", // Path or URL for the image
-    action: "Bought PYPL", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Success",
+    image: '/images/brand/brand-08.svg', // Path or URL for the image
+    action: 'Bought PYPL', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Success',
   },
   {
-    image: "/images/brand/brand-07.svg", // Path or URL for the image
-    action: "Bought AAPL", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Pending",
+    image: '/images/brand/brand-07.svg', // Path or URL for the image
+    action: 'Bought AAPL', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Pending',
   },
   {
-    image: "/images/brand/brand-15.svg", // Path or URL for the image
-    action: "Sell KKST", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Success",
+    image: '/images/brand/brand-15.svg', // Path or URL for the image
+    action: 'Sell KKST', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Success',
   },
   {
-    image: "/images/brand/brand-02.svg", // Path or URL for the image
-    action: "Bought FB", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Success",
+    image: '/images/brand/brand-02.svg', // Path or URL for the image
+    action: 'Bought FB', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Success',
   },
   {
-    image: "/images/brand/brand-10.svg", // Path or URL for the image
-    action: "Sell AMZN", // Action description
-    date: "Nov 23, 01:00 PM", // Date and time of the transaction
-    amount: "$2,567.88", // Transaction amount
-    category: "Finance", // Category of the transaction
-    status: "Failed",
+    image: '/images/brand/brand-10.svg', // Path or URL for the image
+    action: 'Sell AMZN', // Action description
+    date: 'Nov 23, 01:00 PM', // Date and time of the transaction
+    amount: '$2,567.88', // Transaction amount
+    category: 'Finance', // Category of the transaction
+    status: 'Failed',
   },
 ];
 
@@ -273,11 +267,11 @@ export default function BasicTableThree() {
                     <Badge
                       size="sm"
                       color={
-                        item.status === "Success"
-                          ? "success"
-                          : item.status === "Pending"
-                          ? "warning"
-                          : "error"
+                        item.status === 'Success'
+                          ? 'success'
+                          : item.status === 'Pending'
+                            ? 'warning'
+                            : 'error'
                       }
                     >
                       {item.status}
@@ -329,8 +323,8 @@ export default function BasicTableThree() {
                   onClick={() => goToPage(idx + 1)}
                   className={`flex h-10 w-10 items-center justify-center rounded-lg text-theme-sm font-medium ${
                     currentPage === idx + 1
-                      ? "bg-brand-500 text-white"
-                      : "text-gray-700 hover:bg-brand-500/[0.08] dark:hover:bg-brand-500 dark:hover:text-white hover:text-brand-500 dark:text-gray-400 "
+                      ? 'bg-brand-500 text-white'
+                      : 'text-gray-700 hover:bg-brand-500/[0.08] dark:hover:bg-brand-500 dark:hover:text-white hover:text-brand-500 dark:text-gray-400 '
                   }`}
                 >
                   {idx + 1}

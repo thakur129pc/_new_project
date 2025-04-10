@@ -1,5 +1,5 @@
-import React from "react";
-import { Task } from "./types/Task";
+import React from 'react';
+import { Task } from './types/Task';
 
 interface TaskItemProps extends Task {
   onDragStart: (e: React.DragEvent<HTMLDivElement>) => void;
@@ -42,10 +42,7 @@ const TaskItem: React.FC<TaskItemProps> = ({
             </svg>
           </span>
 
-          <label
-            htmlFor={`taskCheckbox${id}`}
-            className="w-full cursor-pointer"
-          >
+          <label htmlFor={`taskCheckbox${id}`} className="w-full cursor-pointer">
             <div className="relative flex items-start">
               <input
                 type="checkbox"
@@ -55,7 +52,7 @@ const TaskItem: React.FC<TaskItemProps> = ({
                 onChange={toggleChecked}
               />
               <div className="flex items-center justify-center w-full h-5 mr-3 border border-gray-300 rounded-md box max-w-5 dark:border-gray-700">
-                <span className={`opacity-${isChecked ? "100" : "0"}`}>
+                <span className={`opacity-${isChecked ? '100' : '0'}`}>
                   <svg
                     width="14"
                     height="14"
@@ -73,9 +70,7 @@ const TaskItem: React.FC<TaskItemProps> = ({
                   </svg>
                 </span>
               </div>
-              <p className="-mt-0.5 text-base text-gray-800 dark:text-white/90">
-                {title}
-              </p>
+              <p className="-mt-0.5 text-base text-gray-800 dark:text-white/90">{title}</p>
             </div>
           </label>
         </div>

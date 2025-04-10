@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Dropdown } from "../ui/dropdown/Dropdown";
-import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { MoreDotIcon } from "../../icons";
+import React, { useState } from 'react';
+import { Dropdown } from '../ui/dropdown/Dropdown';
+import { DropdownItem } from '../ui/dropdown/DropdownItem';
+import { MoreDotIcon } from '../../icons';
 
 export default function ChatBoxHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,9 +25,7 @@ export default function ChatBoxHeader() {
           <span className="absolute bottom-0 right-0 block h-3 w-3 rounded-full border-[1.5px] border-white bg-success-500 dark:border-gray-900"></span>
         </div>
 
-        <h5 className="text-sm font-medium text-gray-500 dark:text-gray-400">
-          Lindsey Curtis
-        </h5>
+        <h5 className="text-sm font-medium text-gray-500 dark:text-gray-400">Lindsey Curtis</h5>
       </div>
 
       <div className="flex items-center gap-3">
@@ -71,11 +69,7 @@ export default function ChatBoxHeader() {
             <button onClick={toggleDropdown}>
               <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300" />
             </button>
-            <Dropdown
-              isOpen={isOpen}
-              onClose={closeDropdown}
-              className="w-40 p-2"
-            >
+            <Dropdown isOpen={isOpen} onClose={closeDropdown} className="w-40 p-2">
               <DropdownItem
                 onItemClick={closeDropdown}
                 className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"

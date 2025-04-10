@@ -1,21 +1,15 @@
-import React from "react";
-import ComponentCard from "../common/ComponentCard";
-import { Link } from "react-router";
+import React from 'react';
+import ComponentCard from '../common/ComponentCard';
+import { Link } from 'react-router';
 
 export default function DefaultLinkExample() {
   return (
     <ComponentCard title="Colored Links">
       <div className="flex flex-col space-y-3">
-        <Link
-          to="/"
-          className="text-sm font-normal text-gray-500 dark:text-gray-400"
-        >
+        <Link to="/" className="text-sm font-normal text-gray-500 dark:text-gray-400">
           Primary link
         </Link>
-        <Link
-          to="/"
-          className="text-sm font-normal text-brand-500 dark:text-brand-500"
-        >
+        <Link to="/" className="text-sm font-normal text-brand-500 dark:text-brand-500">
           Secondary link
         </Link>
         <Link to="/" className="text-sm font-normal text-success-500">
@@ -33,10 +27,7 @@ export default function DefaultLinkExample() {
         <Link to="/" className="text-sm font-normal text-gray-400">
           Primary link
         </Link>
-        <Link
-          to="/"
-          className="text-sm font-normal text-gray-800 dark:text-white/90"
-        >
+        <Link to="/" className="text-sm font-normal text-gray-800 dark:text-white/90">
           Primary link
         </Link>
       </div>

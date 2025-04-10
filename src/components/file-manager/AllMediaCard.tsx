@@ -1,61 +1,54 @@
-import {
-  AudioIcon,
-  DownloadIcon,
-  FileIcon,
-  FolderIcon,
-  GridIcon,
-  VideoIcon,
-} from "../../icons";
-import FileCard from "./FileCard";
+import { AudioIcon, DownloadIcon, FileIcon, FolderIcon, GridIcon, VideoIcon } from '../../icons';
+import FileCard from './FileCard';
 
 const fileData = [
   {
     icon: <FolderIcon />,
-    title: "Image",
-    usage: "17% Used",
+    title: 'Image',
+    usage: '17% Used',
     fileCount: 245,
-    storageUsed: "26.40 GB",
-    iconStyle: "bg-success-500/[0.08] text-success-500",
+    storageUsed: '26.40 GB',
+    iconStyle: 'bg-success-500/[0.08] text-success-500',
   },
   {
     icon: <VideoIcon />,
-    title: "Videos",
-    usage: "22% Used",
+    title: 'Videos',
+    usage: '22% Used',
     fileCount: 245,
-    storageUsed: "26.40 GB",
-    iconStyle: "bg-theme-pink-500/[0.08] text-theme-pink-500",
+    storageUsed: '26.40 GB',
+    iconStyle: 'bg-theme-pink-500/[0.08] text-theme-pink-500',
   },
   {
     icon: <AudioIcon />,
-    title: "Audios",
-    usage: "23% Used",
+    title: 'Audios',
+    usage: '23% Used',
     fileCount: 830,
-    storageUsed: "18.90 GB",
-    iconStyle: "bg-blue-500/[0.08] text-blue-light-500",
+    storageUsed: '18.90 GB',
+    iconStyle: 'bg-blue-500/[0.08] text-blue-light-500',
   },
   {
     icon: <GridIcon />,
-    title: "Apps",
-    usage: "65% Used",
+    title: 'Apps',
+    usage: '65% Used',
     fileCount: 1200,
-    storageUsed: "85.30 GB",
-    iconStyle: "bg-orange-500/[0.08] text-orange-500",
+    storageUsed: '85.30 GB',
+    iconStyle: 'bg-orange-500/[0.08] text-orange-500',
   },
   {
     icon: <FileIcon />,
-    title: "Documents",
-    usage: "10% Used",
+    title: 'Documents',
+    usage: '10% Used',
     fileCount: 78,
-    storageUsed: "5.40 GB",
-    iconStyle: "bg-warning-500/[0.08] text-warning-500",
+    storageUsed: '5.40 GB',
+    iconStyle: 'bg-warning-500/[0.08] text-warning-500',
   },
   {
     icon: <DownloadIcon />,
-    title: "Downloads",
-    usage: "16% Used",
+    title: 'Downloads',
+    usage: '16% Used',
     fileCount: 245,
-    storageUsed: "26.40 GB",
-    iconStyle: "bg-theme-purple-500/[0.08] text-theme-purple-500",
+    storageUsed: '26.40 GB',
+    iconStyle: 'bg-theme-purple-500/[0.08] text-theme-purple-500',
   },
 ];
 
@@ -64,9 +57,7 @@ export default function AllMediaCard() {
     <div className="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
       <div className="px-4 py-4 sm:pl-6 sm:pr-4">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-            All Media
-          </h3>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">All Media</h3>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <div className="relative">

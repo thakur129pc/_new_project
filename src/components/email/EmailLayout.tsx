@@ -1,7 +1,7 @@
-import React from "react";
-import PageBreadcrumb from "../../components/common/PageBreadCrumb";
-import EmailSidebar from "./EmailSidebar";
-import { Outlet } from "react-router";
+import React from 'react';
+import PageBreadcrumb from '../../components/common/PageBreadCrumb';
+import EmailSidebar from './EmailSidebar';
+import { Outlet } from 'react-router';
 
 export default function EmailLayout() {
   return (

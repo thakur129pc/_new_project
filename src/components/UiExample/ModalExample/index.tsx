@@ -1,9 +1,9 @@
-import React from "react";
-import DefaultModal from "./DefaultModal";
-import VerticallyCenteredModal from "./VerticallyCenteredModal";
-import FormInModal from "./FormInModal";
-import FullScreenModal from "./FullScreenModal";
-import ModalBasedAlerts from "./ModalBasedAlerts";
+import React from 'react';
+import DefaultModal from './DefaultModal';
+import VerticallyCenteredModal from './VerticallyCenteredModal';
+import FormInModal from './FormInModal';
+import FullScreenModal from './FullScreenModal';
+import ModalBasedAlerts from './ModalBasedAlerts';
 
 export default function ModalExamples() {
   return (

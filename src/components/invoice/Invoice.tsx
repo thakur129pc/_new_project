@@ -1,6 +1,6 @@
-import React from "react";
-import InvoiceSidebar from "./InvoiceSidebar";
-import InvoiceMain from "./InvoiceMain";
+import React from 'react';
+import InvoiceSidebar from './InvoiceSidebar';
+import InvoiceMain from './InvoiceMain';
 
 export default function Invoice() {
   return (

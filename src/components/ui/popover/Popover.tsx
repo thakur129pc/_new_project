@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect, ReactNode } from "react";
+import React, { useState, useRef, useEffect, ReactNode } from 'react';
 
-type Position = "top" | "right" | "bottom" | "left";
+type Position = 'top' | 'right' | 'bottom' | 'left';
 
 interface PopoverProps {
   position: Position;
@@ -25,28 +25,26 @@ export default function Popover({ position, trigger, children }: PopoverProps) {
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
   const togglePopover = () => setIsOpen(!isOpen);
 
   const positionClasses = {
-    top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2",
-    right: "left-full top-1/2 transform -translate-y-1/2 ml-2",
-    bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2",
-    left: "right-full top-1/2 transform -translate-y-1/2 mr-2",
+    top: 'bottom-full left-1/2 transform -translate-x-1/2 mb-2',
+    right: 'left-full top-1/2 transform -translate-y-1/2 ml-2',
+    bottom: 'top-full left-1/2 transform -translate-x-1/2 mt-2',
+    left: 'right-full top-1/2 transform -translate-y-1/2 mr-2',
   };
 
   const arrowClasses = {
-    top: "bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45",
-    right:
-      "left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 rotate-45",
-    bottom:
-      "top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45",
-    left: "right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 rotate-45",
+    top: 'bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45',
+    right: 'left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 rotate-45',
+    bottom: 'top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45',
+    left: 'right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 rotate-45',
   };
 
   return (

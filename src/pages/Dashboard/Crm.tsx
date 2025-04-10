@@ -1,10 +1,10 @@
-import CrmStatisticsChart from "../../components/crm/CrmStatisticsChart";
-import CrmMetrics from "../../components/crm/CrmMetrics";
-import CrmRecentOrder from "../../components/crm/CrmRecentOrderTable";
-import UpcomingSchedule from "../../components/crm/UpcomingSchedule";
-import SalePieChart from "../../components/crm/SalePieChart";
-import EstimatedRevenue from "../../components/crm/EstimatedRevenue";
-import PageMeta from "../../components/common/PageMeta";
+import CrmStatisticsChart from '../../components/crm/CrmStatisticsChart';
+import CrmMetrics from '../../components/crm/CrmMetrics';
+import CrmRecentOrder from '../../components/crm/CrmRecentOrderTable';
+import UpcomingSchedule from '../../components/crm/UpcomingSchedule';
+import SalePieChart from '../../components/crm/SalePieChart';
+import EstimatedRevenue from '../../components/crm/EstimatedRevenue';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function Crm() {
   return (

@@ -1,5 +1,5 @@
-import Badge from "../ui/badge/Badge";
-import { ArrowDownIcon, ArrowUpIcon } from "../../icons";
+import Badge from '../ui/badge/Badge';
+import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
 
 type StockCardProps = {
   imgUrl: string;
@@ -7,7 +7,7 @@ type StockCardProps = {
   companyName: string;
   price: string;
   change: string;
-  changeDirection: "up" | "down"; // Direction of the price change
+  changeDirection: 'up' | 'down'; // Direction of the price change
 };
 
 // Component rendering
@@ -36,16 +36,12 @@ const StockCard: React.FC<StockCardProps> = ({
       </div>
       <div className="flex items-end justify-between">
         <div>
-          <h4 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-            {price}
-          </h4>
+          <h4 className="text-lg font-semibold text-gray-800 dark:text-white/90">{price}</h4>
         </div>
         <Badge
           variant="light"
-          color={changeDirection === "up" ? "success" : "error"}
-          startIcon={
-            changeDirection === "up" ? <ArrowUpIcon /> : <ArrowDownIcon />
-          }
+          color={changeDirection === 'up' ? 'success' : 'error'}
+          startIcon={changeDirection === 'up' ? <ArrowUpIcon /> : <ArrowDownIcon />}
         >
           {change}
         </Badge>

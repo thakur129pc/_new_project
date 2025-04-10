@@ -1,5 +1,5 @@
-import PageMeta from "../../components/common/PageMeta";
-import EmailContent from "../../components/email/EmailContent";
+import PageMeta from '../../components/common/PageMeta';
+import EmailContent from '../../components/email/EmailContent';
 
 export default function EmailInbox() {
   return (

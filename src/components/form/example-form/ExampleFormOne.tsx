@@ -1,30 +1,30 @@
-import React, { useState } from "react";
-import ComponentCard from "../../common/ComponentCard";
-import Form from "../Form";
-import Label from "../Label";
-import Input from "../input/InputField";
-import Select from "../Select";
-import TextArea from "../input/TextArea";
-import Button from "../../ui/button/Button";
-import { PaperPlaneIcon } from "../../../icons";
+import React, { useState } from 'react';
+import ComponentCard from '../../common/ComponentCard';
+import Form from '../Form';
+import Label from '../Label';
+import Input from '../input/InputField';
+import Select from '../Select';
+import TextArea from '../input/TextArea';
+import Button from '../../ui/button/Button';
+import { PaperPlaneIcon } from '../../../icons';
 
 export default function ExampleFormOne() {
-  const [message, setMessage] = useState<string>("");
+  const [message, setMessage] = useState<string>('');
   const handleSubmit = (e: React.FormEvent) => {
-    console.log("Form submitted:");
+    console.log('Form submitted:');
   };
   const options = [
-    { value: "marketing", label: "Option 1" },
-    { value: "template", label: "Option 2" },
-    { value: "development", label: "Option 3" },
+    { value: 'marketing', label: 'Option 1' },
+    { value: 'template', label: 'Option 2' },
+    { value: 'development', label: 'Option 3' },
   ];
   const handleSelectChange = (value: string) => {
-    console.log("Selected value:", value);
+    console.log('Selected value:', value);
   };
 
   const handleTextareaChange = (value: string) => {
     setMessage(value);
-    console.log("Message:", value);
+    console.log('Message:', value);
   };
   return (
     <ComponentCard title="Example Form">
@@ -40,11 +40,7 @@ export default function ExampleFormOne() {
           </div>
           <div className="col-span-2">
             <Label htmlFor="email">Email</Label>
-            <Input
-              type="text"
-              placeholder="Enter email address"
-              id="firstName"
-            />
+            <Input type="text" placeholder="Enter email address" id="firstName" />
           </div>
           <div className="col-span-2">
             <Label htmlFor="subject">Subject</Label>

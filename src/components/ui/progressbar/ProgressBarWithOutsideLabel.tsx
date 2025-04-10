@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function ProgressBarWithOutsideLabel() {
   return (
@@ -8,9 +8,7 @@ export default function ProgressBarWithOutsideLabel() {
           <div className="absolute left-0 w-[40%] h-full bg-brand-500 rounded"></div>
         </div>
 
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-400">
-          40%
-        </span>
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-400">40%</span>
       </div>
 
       <div className="flex items-center gap-3">
@@ -18,9 +16,7 @@ export default function ProgressBarWithOutsideLabel() {
           <div className="absolute left-0 w-[70%] h-full bg-brand-500 rounded"></div>
         </div>
 
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-400">
-          70%
-        </span>
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-400">70%</span>
       </div>
 
       <div className="flex items-center gap-3">
@@ -28,9 +24,7 @@ export default function ProgressBarWithOutsideLabel() {
           <div className="absolute left-0 w-[30%] h-full bg-brand-500 rounded"></div>
         </div>
 
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-400">
-          30%
-        </span>
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-400">30%</span>
       </div>
     </div>
   );

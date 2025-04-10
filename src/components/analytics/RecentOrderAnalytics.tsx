@@ -1,11 +1,5 @@
-import Button from "../ui/button/Button";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableRow,
-} from "../ui/table";
+import Button from '../ui/button/Button';
+import { Table, TableBody, TableCell, TableHeader, TableRow } from '../ui/table';
 
 // Define the TypeScript interface for the table rows
 interface Product {
@@ -21,59 +15,59 @@ interface Product {
 const tableData: Product[] = [
   {
     id: 1,
-    name: "TailGrids",
-    category: "UI Kits",
-    country: "/images/country/country-01.svg",
-    cr: "Dashboard",
-    value: "12,499", // Replace with actual image URL
+    name: 'TailGrids',
+    category: 'UI Kits',
+    country: '/images/country/country-01.svg',
+    cr: 'Dashboard',
+    value: '12,499', // Replace with actual image URL
   },
   {
     id: 2,
-    name: "GrayGrids",
-    category: "Templates",
-    country: "/images/country/country-02.svg",
-    cr: "Dashboard",
-    value: "5498", // Replace with actual image URL
+    name: 'GrayGrids',
+    category: 'Templates',
+    country: '/images/country/country-02.svg',
+    cr: 'Dashboard',
+    value: '5498', // Replace with actual image URL
   },
   {
     id: 3,
-    name: "Uideck",
-    category: "Templates",
-    country: "/images/country/country-03.svg",
-    cr: "Dashboard",
-    value: "4621", // Replace with actual image URL
+    name: 'Uideck',
+    category: 'Templates',
+    country: '/images/country/country-03.svg',
+    cr: 'Dashboard',
+    value: '4621', // Replace with actual image URL
   },
   {
     id: 4,
-    name: "FormBold",
-    category: "SaaS",
-    country: "/images/country/country-04.svg",
-    cr: "Dashboard",
-    value: "13843", // Replace with actual image URL
+    name: 'FormBold',
+    category: 'SaaS',
+    country: '/images/country/country-04.svg',
+    cr: 'Dashboard',
+    value: '13843', // Replace with actual image URL
   },
   {
     id: 5,
-    name: "NextAdmin",
-    category: "Templates",
-    country: "/images/country/country-05.svg",
-    cr: "Dashboard",
-    value: "7523", // Replace with actual image URL
+    name: 'NextAdmin',
+    category: 'Templates',
+    country: '/images/country/country-05.svg',
+    cr: 'Dashboard',
+    value: '7523', // Replace with actual image URL
   },
   {
     id: 6,
-    name: "Form Builder",
-    category: "Templates",
-    country: "/images/country/country-06.svg",
-    cr: "Dashboard",
-    value: "1,377", // Replace with actual image URL
+    name: 'Form Builder',
+    category: 'Templates',
+    country: '/images/country/country-06.svg',
+    cr: 'Dashboard',
+    value: '1,377', // Replace with actual image URL
   },
   {
     id: 7,
-    name: "AyroUI",
-    category: "Templates",
-    country: "/images/country/country-07.svg",
-    cr: "Dashboard",
-    value: "599,00", // Replace with actual image URL
+    name: 'AyroUI',
+    category: 'Templates',
+    country: '/images/country/country-07.svg',
+    cr: 'Dashboard',
+    value: '599,00', // Replace with actual image URL
   },
 ];
 
@@ -185,11 +179,7 @@ export default function RecentOrderAnalytics() {
                   </TableCell>
                   <TableCell className="px-4 py-3 text-gray-500 sm:px-6 text-start text-theme-sm dark:text-gray-400">
                     <div className="w-5 h-5 overflow-hidden rounded-full">
-                      <img
-                        src={product.country}
-                        className="w-5 h-5 rounded-full"
-                        alt="country"
-                      />
+                      <img src={product.country} className="w-5 h-5 rounded-full" alt="country" />
                     </div>
                   </TableCell>
                   <TableCell className="px-4 py-3 text-gray-500 sm:px-6 text-start text-theme-sm dark:text-gray-400">

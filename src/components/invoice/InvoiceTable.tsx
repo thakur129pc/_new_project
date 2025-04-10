@@ -1,11 +1,5 @@
-import React from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableRow,
-} from "../ui/table";
+import React from 'react';
+import { Table, TableBody, TableCell, TableHeader, TableRow } from '../ui/table';
 
 export default function InvoiceTable() {
   return (
@@ -19,19 +13,19 @@ export default function InvoiceTable() {
                 className="px-5 py-3 text-sm font-medium text-left text-gray-700 dark:text-gray-400"
               >
                 #
-              </TableCell>{" "}
+              </TableCell>{' '}
               <TableCell
                 isHeader
                 className="px-5 py-3 text-sm font-medium text-left text-gray-700 dark:text-gray-400"
               >
                 Product
-              </TableCell>{" "}
+              </TableCell>{' '}
               <TableCell
                 isHeader
                 className="px-5 py-3 text-sm font-medium text-left text-gray-700 dark:text-gray-400"
               >
                 Quantity
-              </TableCell>{" "}
+              </TableCell>{' '}
               <TableCell
                 isHeader
                 className="px-5 py-3 text-sm font-medium text-left text-gray-700 dark:text-gray-400"
@@ -54,7 +48,7 @@ export default function InvoiceTable() {
               <TableCell className="px-5 py-3.5 text-left dark:border-white/[0.05] text-gray-500 text-theme-sm dark:text-gray-400">
                 $48
               </TableCell>
-            </TableRow>{" "}
+            </TableRow>{' '}
             <TableRow>
               <TableCell className="px-5 py-3.5 text-left dark:border-white/[0.05] text-gray-500 text-theme-sm dark:text-gray-400">
                 1
@@ -68,7 +62,7 @@ export default function InvoiceTable() {
               <TableCell className="px-5 py-3.5 text-left dark:border-white/[0.05] text-gray-500 text-theme-sm dark:text-gray-400">
                 $48
               </TableCell>
-            </TableRow>{" "}
+            </TableRow>{' '}
             <TableRow>
               <TableCell className="px-5 py-3.5 text-left dark:border-white/[0.05] text-gray-500 text-theme-sm dark:text-gray-400">
                 1
@@ -82,7 +76,7 @@ export default function InvoiceTable() {
               <TableCell className="px-5 py-3.5 text-left dark:border-white/[0.05] text-gray-500 text-theme-sm dark:text-gray-400">
                 $48
               </TableCell>
-            </TableRow>{" "}
+            </TableRow>{' '}
             <TableRow>
               <TableCell className="px-5 py-3.5 text-left dark:border-white/[0.05] text-gray-500 text-theme-sm dark:text-gray-400">
                 1

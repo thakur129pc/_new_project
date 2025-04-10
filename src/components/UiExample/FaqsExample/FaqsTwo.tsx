@@ -1,52 +1,48 @@
-import React, { useState } from "react";
-import FaqTwo from "../../faqs/FaqTwo";
+import React, { useState } from 'react';
+import FaqTwo from '../../faqs/FaqTwo';
 
 const accordionTwoData = [
   {
-    title: "Do I get free updates?",
+    title: 'Do I get free updates?',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.',
   },
   {
-    title: "Which license type is suitable for me?",
+    title: 'Which license type is suitable for me?',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.',
   },
   {
-    title: "What are the Seats mentioned on pricing plans?",
+    title: 'What are the Seats mentioned on pricing plans?',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.',
   },
   {
-    title: "Can I Customize TailAdmin to suit my needs?",
+    title: 'Can I Customize TailAdmin to suit my needs?',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.',
   },
   {
-    title: "What does Unlimited Projects mean?",
+    title: 'What does Unlimited Projects mean?',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.',
   },
   {
-    title: "Can I upgrade to a higher plan?",
+    title: 'Can I upgrade to a higher plan?',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.',
   },
   {
-    title: "Are there dark and light mode options?",
+    title: 'Are there dark and light mode options?',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna ac nibh malesuada consectetur at vitae ipsum orem ipsum dolor sit amet, consectetur adipiscing elit nam fermentum, leo et lacinia accumsan.',
   },
 ];
 
 export default function FaqsTwo() {
   // State to manage the open accordion for both groups separately
-  const [openIndexFirstGroup, setOpenIndexFirstGroup] = useState<number | null>(
-    0
-  );
-  const [openIndexSecondGroup, setOpenIndexSecondGroup] = useState<
-    number | null
-  >(0);
+  const [openIndexFirstGroup, setOpenIndexFirstGroup] = useState<number | null>(0);
+  const [openIndexSecondGroup, setOpenIndexSecondGroup] = useState<number | null>(0);
 
   // Handle toggle for first group
   const handleToggleFirstGroup = (index: number) => {
@@ -63,7 +59,7 @@ export default function FaqsTwo() {
   const renderFaqItems = (
     data: typeof accordionTwoData,
     openIndex: number | null,
-    handleToggle: (index: number) => void
+    handleToggle: (index: number) => void,
   ) =>
     data.map((item, index) => (
       <FaqTwo
@@ -77,19 +73,15 @@ export default function FaqsTwo() {
   return (
     <div className="grid gird-cols-1 gap-x-8 gap-y-5 xl:grid-cols-2">
       <div className="space-y-3">
-        {renderFaqItems(
-          accordionTwoData.slice(0, 3),
-          openIndexFirstGroup,
-          handleToggleFirstGroup
-        )}{" "}
+        {renderFaqItems(accordionTwoData.slice(0, 3), openIndexFirstGroup, handleToggleFirstGroup)}{' '}
         {/* First group */}
       </div>
       <div className="space-y-3">
         {renderFaqItems(
           accordionTwoData.slice(3, 7),
           openIndexSecondGroup,
-          handleToggleSecondGroup
-        )}{" "}
+          handleToggleSecondGroup,
+        )}{' '}
         {/* Second group */}
       </div>
     </div>

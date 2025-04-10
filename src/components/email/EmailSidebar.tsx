@@ -1,6 +1,6 @@
-import LabelList from "./LabelList";
-import MailBox from "./MailBox";
-import FilterList from "./FilterList";
+import LabelList from './LabelList';
+import MailBox from './MailBox';
+import FilterList from './FilterList';
 
 export default function EmailSidebar() {
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 interface TabButtonProps {
   id: string;
@@ -7,18 +7,13 @@ interface TabButtonProps {
   onClick: () => void;
 }
 
-export const TabButton: React.FC<TabButtonProps> = ({
-  id,
-  label,
-  isActive,
-  onClick,
-}) => {
+export const TabButton: React.FC<TabButtonProps> = ({ id, label, isActive, onClick }) => {
   return (
     <button
       className={`inline-flex items-center border-b-2 px-2.5 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
         isActive
-          ? "text-brand-500 dark:text-brand-400 border-brand-500 dark:border-brand-400"
-          : "bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+          ? 'text-brand-500 dark:text-brand-400 border-brand-500 dark:border-brand-400'
+          : 'bg-transparent text-gray-500 border-transparent hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
       }`}
       onClick={onClick}
     >
@@ -38,28 +33,25 @@ const TabContent: React.FC<TabContentProps> = ({ id, title, isActive }) => {
 
   return (
     <div>
-      <h3 className="mb-1 text-xl font-medium text-gray-800 dark:text-white/90">
-        {title}
-      </h3>
+      <h3 className="mb-1 text-xl font-medium text-gray-800 dark:text-white/90">{title}</h3>
       <p className="text-sm text-gray-500 dark:text-gray-400">
-        {title} ipsum dolor sit amet consectetur. Non vitae facilisis urna
-        tortor placerat egestas donec. Faucibus diam gravida enim elit lacus a.
-        Tincidunt fermentum condimentum quis et a et tempus. Tristique urna nisi
-        nulla elit sit libero scelerisque ante.
+        {title} ipsum dolor sit amet consectetur. Non vitae facilisis urna tortor placerat egestas
+        donec. Faucibus diam gravida enim elit lacus a. Tincidunt fermentum condimentum quis et a et
+        tempus. Tristique urna nisi nulla elit sit libero scelerisque ante.
       </p>
     </div>
   );
 };
 
 const tabs = [
-  { id: "overview", label: "Overview" },
-  { id: "notification", label: "Notification" },
-  { id: "analytics", label: "Analytics" },
-  { id: "customers", label: "Customers" },
+  { id: 'overview', label: 'Overview' },
+  { id: 'notification', label: 'Notification' },
+  { id: 'analytics', label: 'Analytics' },
+  { id: 'customers', label: 'Customers' },
 ];
 
 const TabWithUnderline: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("overview");
+  const [activeTab, setActiveTab] = useState('overview');
 
   return (
     <div className="p-6 border border-gray-200 rounded-xl dark:border-gray-800">
@@ -79,12 +71,7 @@ const TabWithUnderline: React.FC = () => {
 
       <div className="pt-4 dark:border-gray-800">
         {tabs.map((tab) => (
-          <TabContent
-            key={tab.id}
-            id={tab.id}
-            title={tab.label}
-            isActive={activeTab === tab.id}
-          />
+          <TabContent key={tab.id} id={tab.id} title={tab.label} isActive={activeTab === tab.id} />
         ))}
       </div>
     </div>

@@ -1,18 +1,15 @@
-import React, { useState } from "react";
-import Checkbox from "../form/input/Checkbox";
-import { MoreDotIcon } from "../../icons";
-import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { Dropdown } from "../ui/dropdown/Dropdown";
+import React, { useState } from 'react';
+import Checkbox from '../form/input/Checkbox';
+import { MoreDotIcon } from '../../icons';
+import { DropdownItem } from '../ui/dropdown/DropdownItem';
+import { Dropdown } from '../ui/dropdown/Dropdown';
 
 interface EmailHeaderProps {
   isChecked: boolean;
   onSelectAll: (checked: boolean) => void;
 }
 
-export default function EmailHeader({
-  isChecked,
-  onSelectAll,
-}: EmailHeaderProps) {
+export default function EmailHeader({ isChecked, onSelectAll }: EmailHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const [isOpenThree, setIsOpenThree] = useState(false);
@@ -42,7 +39,7 @@ export default function EmailHeader({
             <span
               onClick={toggleDropdownTwo}
               className={`${
-                isOpen ? "rotate-180" : ""
+                isOpen ? 'rotate-180' : ''
               } text-gray-500 duration-300 ease-linear dark:text-gray-40`}
             >
               <svg
@@ -143,11 +140,7 @@ export default function EmailHeader({
           <button onClick={toggleDropdownThree}>
             <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300" />
           </button>
-          <Dropdown
-            isOpen={isOpenThree}
-            onClose={closeDropdownThree}
-            className="w-40 p-2"
-          >
+          <Dropdown isOpen={isOpenThree} onClose={closeDropdownThree} className="w-40 p-2">
             <DropdownItem
               onItemClick={closeDropdownThree}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"

@@ -20,7 +20,7 @@ axiosInstance.interceptors.request.use(
 
     return config;
   },
-  (error) => Promise.reject(error)
+  (error) => Promise.reject(error),
 );
 
 interface UseAxiosResponse<T> {
@@ -34,7 +34,7 @@ const useAxios = <T>(
   url: string,
   method: Method = 'GET',
   requestData?: any,
-  config: AxiosRequestConfig = {}
+  config: AxiosRequestConfig = {},
 ): UseAxiosResponse<T> => {
   const [data, setData] = useState<T | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -55,14 +55,12 @@ const useAxios = <T>(
         });
         setData(response.data);
       } catch (err: any) {
-        setError(
-          err?.response?.data?.message || err.message || 'Something went wrong'
-        );
+        setError(err?.response?.data?.message || err.message || 'Something went wrong');
       } finally {
         setLoading(false);
       }
     },
-    [url, method, requestData, config]
+    [url, method, requestData, config],
   );
 
   return { data, error, loading, callAPI };

@@ -1,30 +1,30 @@
-import React from "react";
+import React from 'react';
 
-import Chart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
-import { Dropdown } from "../ui/dropdown/Dropdown";
-import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { MoreDotIcon } from "../../icons";
-import { useState } from "react";
+import Chart from 'react-apexcharts';
+import { ApexOptions } from 'apexcharts';
+import { Dropdown } from '../ui/dropdown/Dropdown';
+import { DropdownItem } from '../ui/dropdown/DropdownItem';
+import { MoreDotIcon } from '../../icons';
+import { useState } from 'react';
 
 export default function ActiveUsersChart() {
   const options: ApexOptions = {
     legend: {
       show: false,
-      position: "top",
-      horizontalAlign: "left",
+      position: 'top',
+      horizontalAlign: 'left',
     },
-    colors: ["#465FFF"],
+    colors: ['#465FFF'],
     chart: {
-      fontFamily: "Outfit, sans-serif",
+      fontFamily: 'Outfit, sans-serif',
       height: 140,
-      type: "area",
+      type: 'area',
       toolbar: {
         show: false,
       },
     },
     fill: {
-      type: "gradient", // Ensures gradient fill is explicitly defined
+      type: 'gradient', // Ensures gradient fill is explicitly defined
       gradient: {
         opacityFrom: 0.55,
         opacityTo: 0,
@@ -49,7 +49,7 @@ export default function ActiveUsersChart() {
       },
     ],
     stroke: {
-      curve: "smooth",
+      curve: 'smooth',
       width: 2, // Changed from ["2"] to match type expectations
     },
     markers: {
@@ -72,24 +72,24 @@ export default function ActiveUsersChart() {
     },
     tooltip: {
       x: {
-        format: "dd MMM yyyy",
+        format: 'dd MMM yyyy',
       },
     },
     xaxis: {
-      type: "category",
+      type: 'category',
       categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec',
       ],
       axisBorder: {
         show: false,
@@ -113,7 +113,7 @@ export default function ActiveUsersChart() {
 
   const series = [
     {
-      name: "Sales",
+      name: 'Sales',
       data: [180, 181, 182, 184, 183, 182, 181, 182, 183, 185, 186, 183],
     },
   ];
@@ -130,18 +130,12 @@ export default function ActiveUsersChart() {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] md:p-6">
       <div className="flex items-start justify-between">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-          Active Users
-        </h3>
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">Active Users</h3>
         <div className="relative inline-block">
           <button onClick={toggleDropdown}>
             <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300" />
           </button>
-          <Dropdown
-            isOpen={isOpen}
-            onClose={closeDropdown}
-            className="w-40 p-2"
-          >
+          <Dropdown isOpen={isOpen} onClose={closeDropdown} className="w-40 p-2">
             <DropdownItem
               onItemClick={closeDropdown}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
@@ -181,9 +175,7 @@ export default function ActiveUsersChart() {
 
       <div className="flex items-center justify-center gap-6">
         <div>
-          <p className="text-lg font-semibold text-center text-gray-800 dark:text-white/90">
-            224
-          </p>
+          <p className="text-lg font-semibold text-center text-gray-800 dark:text-white/90">224</p>
           <p className="mt-0.5 text-center text-theme-xs text-gray-500 dark:text-gray-400">
             Avg, Daily
           </p>
@@ -192,9 +184,7 @@ export default function ActiveUsersChart() {
         <div className="w-px bg-gray-200 h-11 dark:bg-gray-800"></div>
 
         <div>
-          <p className="text-lg font-semibold text-center text-gray-800 dark:text-white/90">
-            1.4K
-          </p>
+          <p className="text-lg font-semibold text-center text-gray-800 dark:text-white/90">1.4K</p>
           <p className="mt-0.5 text-center text-theme-xs text-gray-500 dark:text-gray-400">
             Avg, Weekly
           </p>

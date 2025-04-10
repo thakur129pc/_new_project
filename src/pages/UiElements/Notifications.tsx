@@ -1,29 +1,29 @@
-import ComponentCard from "../../components/common/ComponentCard";
-import PageBreadcrumb from "../../components/common/PageBreadCrumb";
-import UpdateNotification from "../../components/ui/notification/UpdateNotification";
-import Notification from "../../components/ui/notification/Notfication";
-import CookieConsent from "../../components/ui/notification/CookieConsent";
-import PageMeta from "../../components/common/PageMeta";
+import ComponentCard from '../../components/common/ComponentCard';
+import PageBreadcrumb from '../../components/common/PageBreadCrumb';
+import UpdateNotification from '../../components/ui/notification/UpdateNotification';
+import Notification from '../../components/ui/notification/Notfication';
+import CookieConsent from '../../components/ui/notification/CookieConsent';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function Notifications() {
   const handleLater = () => {
-    alert("Later button clicked");
+    alert('Later button clicked');
   };
 
   const handleUpdate = () => {
-    alert("Update Now button clicked");
+    alert('Update Now button clicked');
   };
 
   const handleCookieSettings = () => {
-    alert("Cookie Settings clicked");
+    alert('Cookie Settings clicked');
   };
 
   const handleDenyAll = () => {
-    alert("Deny All clicked");
+    alert('Deny All clicked');
   };
 
   const handleAcceptAll = () => {
-    alert("Accept All clicked");
+    alert('Accept All clicked');
   };
 
   return (
@@ -62,10 +62,7 @@ export default function Notifications() {
         </ComponentCard>
         {/* Warning */}
         <ComponentCard title="Warning Notification">
-          <Notification
-            variant="warning"
-            title="Alert: Double Check Required"
-          />
+          <Notification variant="warning" title="Alert: Double Check Required" />
         </ComponentCard>
         {/* Error */}
         <ComponentCard title="Error Notification">

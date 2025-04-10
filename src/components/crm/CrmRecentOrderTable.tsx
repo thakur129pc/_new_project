@@ -1,16 +1,10 @@
-import React, { useState } from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableRow,
-} from "../ui/table";
-import { TrashBinIcon } from "../../icons";
-import AvatarText from "../ui/avatar/AvatarText";
+import React, { useState } from 'react';
+import { Table, TableBody, TableCell, TableHeader, TableRow } from '../ui/table';
+import { TrashBinIcon } from '../../icons';
+import AvatarText from '../ui/avatar/AvatarText';
 
-import Checkbox from "../form/input/Checkbox";
-import Badge from "../ui/badge/Badge";
+import Checkbox from '../form/input/Checkbox';
+import Badge from '../ui/badge/Badge';
 
 // Interface for the table row data
 interface TableRowData {
@@ -20,7 +14,7 @@ interface TableRowData {
     name: string; // User's full name
     email: string; // User's email address
   };
-  avatarColor: "brand" | "blue" | "green" | "red" | "yellow" | "gray"; // Color variant for the avatar
+  avatarColor: 'brand' | 'blue' | 'green' | 'red' | 'yellow' | 'gray'; // Color variant for the avatar
   product: {
     name: string; // Product name
     price: string; // Product price
@@ -28,7 +22,7 @@ interface TableRowData {
   };
   status: {
     // label: string; // Status text
-    type: "Complete" | "Warning" | "Cancel" | "Pending"; // Size of the badge
+    type: 'Complete' | 'Warning' | 'Cancel' | 'Pending'; // Size of the badge
   };
   actions: {
     delete: boolean; // Indicates a delete action is available
@@ -37,100 +31,100 @@ interface TableRowData {
 
 const tableRowData: TableRowData[] = [
   {
-    id: "DE124321",
+    id: 'DE124321',
     user: {
-      initials: "AB",
-      name: "John Doe",
-      email: "johndoe@gmail.com",
+      initials: 'AB',
+      name: 'John Doe',
+      email: 'johndoe@gmail.com',
     },
-    avatarColor: "brand",
+    avatarColor: 'brand',
     product: {
-      name: "Software License",
-      price: "$18,50.34",
-      purchaseDate: "2024-06-15",
+      name: 'Software License',
+      price: '$18,50.34',
+      purchaseDate: '2024-06-15',
     },
     status: {
-      type: "Complete",
+      type: 'Complete',
     },
     actions: {
       delete: true,
     },
   },
   {
-    id: "DE124322",
+    id: 'DE124322',
     user: {
-      initials: "CD",
-      name: "Jane Smith",
-      email: "janesmith@gmail.com",
+      initials: 'CD',
+      name: 'Jane Smith',
+      email: 'janesmith@gmail.com',
     },
-    avatarColor: "brand",
+    avatarColor: 'brand',
     product: {
-      name: "Cloud Hosting",
-      price: "$12,99.00",
-      purchaseDate: "2024-06-18",
+      name: 'Cloud Hosting',
+      price: '$12,99.00',
+      purchaseDate: '2024-06-18',
     },
     status: {
-      type: "Pending",
+      type: 'Pending',
     },
     actions: {
       delete: true,
     },
   },
   {
-    id: "DE124323",
+    id: 'DE124323',
     user: {
-      initials: "EF",
-      name: "Michael Brown",
-      email: "michaelbrown@gmail.com",
+      initials: 'EF',
+      name: 'Michael Brown',
+      email: 'michaelbrown@gmail.com',
     },
-    avatarColor: "brand",
+    avatarColor: 'brand',
     product: {
-      name: "Web Domain",
-      price: "$9,50.00",
-      purchaseDate: "2024-06-20",
+      name: 'Web Domain',
+      price: '$9,50.00',
+      purchaseDate: '2024-06-20',
     },
     status: {
-      type: "Cancel",
+      type: 'Cancel',
     },
     actions: {
       delete: true,
     },
   },
   {
-    id: "DE124324",
+    id: 'DE124324',
     user: {
-      initials: "GH",
-      name: "Alice Johnson",
-      email: "alicejohnson@gmail.com",
+      initials: 'GH',
+      name: 'Alice Johnson',
+      email: 'alicejohnson@gmail.com',
     },
-    avatarColor: "brand",
+    avatarColor: 'brand',
     product: {
-      name: "SSL Certificate",
-      price: "$2,30.45",
-      purchaseDate: "2024-06-25",
+      name: 'SSL Certificate',
+      price: '$2,30.45',
+      purchaseDate: '2024-06-25',
     },
     status: {
-      type: "Pending",
+      type: 'Pending',
     },
     actions: {
       delete: true,
     },
   },
   {
-    id: "DE124325",
+    id: 'DE124325',
     user: {
-      initials: "IJ",
-      name: "Robert Lee",
-      email: "robertlee@gmail.com",
+      initials: 'IJ',
+      name: 'Robert Lee',
+      email: 'robertlee@gmail.com',
     },
-    avatarColor: "brand",
+    avatarColor: 'brand',
     product: {
-      name: "Premium Support",
-      price: "$15,20.00",
-      purchaseDate: "2024-06-30",
+      name: 'Premium Support',
+      price: '$15,20.00',
+      purchaseDate: '2024-06-30',
     },
     status: {
-      type: "Complete",
+      type: 'Complete',
     },
     actions: {
       delete: true,
@@ -155,16 +149,14 @@ export default function CrmRecentOrderTable() {
     setSelectedRows((prevSelected) =>
       prevSelected.includes(id)
         ? prevSelected.filter((rowId) => rowId !== id)
-        : [...prevSelected, id]
+        : [...prevSelected, id],
     );
   };
   return (
     <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white pt-4 dark:border-gray-800 dark:bg-white/[0.03]">
       <div className="flex flex-col gap-4 px-6 mb-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-            Recent Orders
-          </h3>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">Recent Orders</h3>
         </div>
         <div className="flex items-center gap-3">
           <button className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-3 text-theme-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-200">
@@ -219,10 +211,7 @@ export default function CrmRecentOrderTable() {
                 <TableCell className="px-4 py-3 font-medium text-gray-500 sm:px-6 text-theme-xs dark:text-gray-400 text-start">
                   <div className="flex items-center gap-3">
                     <div>
-                      <Checkbox
-                        checked={selectAll}
-                        onChange={handleSelectAll}
-                      />
+                      <Checkbox checked={selectAll} onChange={handleSelectAll} />
                     </div>
                     <div>
                       <span className="font-medium text-gray-500 text-theme-xs dark:text-gray-400">
@@ -301,11 +290,11 @@ export default function CrmRecentOrderTable() {
                     <Badge
                       variant="light"
                       color={
-                        row.status.type === "Complete"
-                          ? "success"
-                          : row.status.type === "Pending"
-                          ? "warning"
-                          : "error"
+                        row.status.type === 'Complete'
+                          ? 'success'
+                          : row.status.type === 'Pending'
+                            ? 'warning'
+                            : 'error'
                       }
                       size="sm"
                     >

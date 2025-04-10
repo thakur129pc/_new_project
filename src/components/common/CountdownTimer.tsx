@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 interface CountdownTimerProps {
   targetDate: Date;
@@ -33,7 +33,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   }, [targetDate]);
 
   const formatTime = (time: number): string => {
-    return time.toString().padStart(2, "0");
+    return time.toString().padStart(2, '0');
   };
 
   return (
@@ -60,7 +60,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
         <span className="inline-block timer-box">
           <span className="inline-block">{timeLeft.days}</span>
         </span>
-        {timeLeft.days === 1 ? " day" : " days"} left
+        {timeLeft.days === 1 ? ' day' : ' days'} left
       </div>
     </div>
   );

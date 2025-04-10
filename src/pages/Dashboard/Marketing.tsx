@@ -1,10 +1,10 @@
-import React from "react";
-import TrafficStats from "../../components/marketing/TrafficStats";
-import MarketingMetricsCards from "../../components/marketing/MarketingMetricsCards";
-import TrafficSource from "../../components/marketing/TrafficSource";
-import ImpressionChart from "../../components/marketing/ImpressionChart";
-import FeaturedCampaign from "../../components/marketing/FeaturedCampaign";
-import PageMeta from "../../components/common/PageMeta";
+import React from 'react';
+import TrafficStats from '../../components/marketing/TrafficStats';
+import MarketingMetricsCards from '../../components/marketing/MarketingMetricsCards';
+import TrafficSource from '../../components/marketing/TrafficSource';
+import ImpressionChart from '../../components/marketing/ImpressionChart';
+import FeaturedCampaign from '../../components/marketing/FeaturedCampaign';
+import PageMeta from '../../components/common/PageMeta';
 
 export default function Marketing() {
   return (

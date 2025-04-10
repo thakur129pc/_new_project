@@ -1,5 +1,5 @@
-import { Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function TrendingStocks() {
   const swiperOptions = {
@@ -8,8 +8,8 @@ export default function TrendingStocks() {
     loop: false,
     spaceBetween: 20,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     breakpoints: {
       768: {
@@ -26,9 +26,7 @@ export default function TrendingStocks() {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] sm:p-6">
       <div className="flex justify-between mb-6">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-          Trending Stocks
-        </h3>
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">Trending Stocks</h3>
 
         <div className="stocks-slider-outer relative flex items-center gap-1.5">
           <div className="swiper-button-prev ">

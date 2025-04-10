@@ -1,139 +1,127 @@
-"use client";
+'use client';
 
-import { useState, useMemo } from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableRow,
-} from "../../../ui/table";
-import {
-  AngleDownIcon,
-  AngleUpIcon,
-  PencilIcon,
-  TrashBinIcon,
-} from "../../../../icons";
-import PaginationWithButton from "./PaginationWithButton";
+import { useState, useMemo } from 'react';
+import { Table, TableBody, TableCell, TableHeader, TableRow } from '../../../ui/table';
+import { AngleDownIcon, AngleUpIcon, PencilIcon, TrashBinIcon } from '../../../../icons';
+import PaginationWithButton from './PaginationWithButton';
 
 const tableRowData = [
   {
     id: 1,
-    name: "Abram Schleifer",
-    position: "Sales Assistant",
-    location: "Edinburgh",
+    name: 'Abram Schleifer',
+    position: 'Sales Assistant',
+    location: 'Edinburgh',
     age: 57,
-    date: "25 Apr, 2027",
-    salary: "$89,500",
+    date: '25 Apr, 2027',
+    salary: '$89,500',
   },
   {
     id: 2,
-    name: "Charlotte Anderson",
-    position: "Marketing Manager",
-    location: "London",
+    name: 'Charlotte Anderson',
+    position: 'Marketing Manager',
+    location: 'London',
     age: 42,
-    date: "12 Mar, 2025",
-    salary: "$105,000",
+    date: '12 Mar, 2025',
+    salary: '$105,000',
   },
   {
     id: 3,
-    name: "Ethan Brown",
-    position: "Software Engineer",
-    location: "San Francisco",
+    name: 'Ethan Brown',
+    position: 'Software Engineer',
+    location: 'San Francisco',
     age: 30,
-    date: "01 Jan, 2024",
-    salary: "$120,000",
+    date: '01 Jan, 2024',
+    salary: '$120,000',
   },
   {
     id: 4,
-    name: "Sophia Martinez",
-    position: "Product Manager",
-    location: "New York",
+    name: 'Sophia Martinez',
+    position: 'Product Manager',
+    location: 'New York',
     age: 35,
-    date: "15 Jun, 2026",
-    salary: "$95,000",
+    date: '15 Jun, 2026',
+    salary: '$95,000',
   },
   {
     id: 5,
-    name: "James Wilson",
-    position: "Data Analyst",
-    location: "Chicago",
+    name: 'James Wilson',
+    position: 'Data Analyst',
+    location: 'Chicago',
     age: 28,
-    date: "20 Sep, 2025",
-    salary: "$80,000",
+    date: '20 Sep, 2025',
+    salary: '$80,000',
   },
   {
     id: 6,
-    name: "Olivia Johnson",
-    position: "HR Specialist",
-    location: "Los Angeles",
+    name: 'Olivia Johnson',
+    position: 'HR Specialist',
+    location: 'Los Angeles',
     age: 40,
-    date: "08 Nov, 2026",
-    salary: "$75,000",
+    date: '08 Nov, 2026',
+    salary: '$75,000',
   },
   {
     id: 7,
-    name: "William Smith",
-    position: "Financial Analyst",
-    location: "Seattle",
+    name: 'William Smith',
+    position: 'Financial Analyst',
+    location: 'Seattle',
     age: 38,
-    date: "03 Feb, 2026",
-    salary: "$88,000",
+    date: '03 Feb, 2026',
+    salary: '$88,000',
   },
   {
     id: 8,
-    name: "Isabella Davis",
-    position: "UI/UX Designer",
-    location: "Austin",
+    name: 'Isabella Davis',
+    position: 'UI/UX Designer',
+    location: 'Austin',
     age: 29,
-    date: "18 Jul, 2025",
-    salary: "$92,000",
+    date: '18 Jul, 2025',
+    salary: '$92,000',
   },
   {
     id: 9,
-    name: "Liam Moore",
-    position: "DevOps Engineer",
-    location: "Boston",
+    name: 'Liam Moore',
+    position: 'DevOps Engineer',
+    location: 'Boston',
     age: 33,
-    date: "30 Oct, 2024",
-    salary: "$115,000",
+    date: '30 Oct, 2024',
+    salary: '$115,000',
   },
   {
     id: 10,
-    name: "Mia Garcia",
-    position: "Content Strategist",
-    location: "Denver",
+    name: 'Mia Garcia',
+    position: 'Content Strategist',
+    location: 'Denver',
     age: 27,
-    date: "12 Dec, 2027",
-    salary: "$70,000",
+    date: '12 Dec, 2027',
+    salary: '$70,000',
   },
 ];
-type SortKey = "name" | "position" | "location" | "age" | "date" | "salary";
-type SortOrder = "asc" | "desc";
+type SortKey = 'name' | 'position' | 'location' | 'age' | 'date' | 'salary';
+type SortOrder = 'asc' | 'desc';
 
 export default function DataTableTwo() {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
-  const [sortKey, setSortKey] = useState<SortKey>("name");
-  const [sortOrder, setSortOrder] = useState<SortOrder>("asc");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [sortKey, setSortKey] = useState<SortKey>('name');
+  const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const filteredAndSortedData = useMemo(() => {
     return tableRowData
       .filter((item) =>
         Object.values(item).some(
           (value) =>
-            typeof value === "string" &&
-            value.toLowerCase().includes(searchTerm.toLowerCase())
-        )
+            typeof value === 'string' && value.toLowerCase().includes(searchTerm.toLowerCase()),
+        ),
       )
       .sort((a, b) => {
-        if (sortKey === "salary") {
-          const salaryA = Number.parseInt(a[sortKey].replace(/\$|,/g, ""));
-          const salaryB = Number.parseInt(b[sortKey].replace(/\$|,/g, ""));
-          return sortOrder === "asc" ? salaryA - salaryB : salaryB - salaryA;
+        if (sortKey === 'salary') {
+          const salaryA = Number.parseInt(a[sortKey].replace(/\$|,/g, ''));
+          const salaryB = Number.parseInt(b[sortKey].replace(/\$|,/g, ''));
+          return sortOrder === 'asc' ? salaryA - salaryB : salaryB - salaryA;
         }
-        return sortOrder === "asc"
+        return sortOrder === 'asc'
           ? String(a[sortKey]).localeCompare(String(b[sortKey]))
           : String(b[sortKey]).localeCompare(String(a[sortKey]));
       });
@@ -148,10 +136,10 @@ export default function DataTableTwo() {
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
-      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
     } else {
       setSortKey(key);
-      setSortOrder("asc");
+      setSortOrder('asc');
     }
   };
 
@@ -236,12 +224,12 @@ export default function DataTableTwo() {
             <TableHeader className="border-t border-gray-100 dark:border-white/[0.05]">
               <TableRow>
                 {[
-                  { key: "name", label: "User" },
-                  { key: "position", label: "Position" },
-                  { key: "location", label: "Office" },
-                  { key: "age", label: "Age" },
-                  { key: "date", label: "Start Date" },
-                  { key: "salary", label: "Salary" },
+                  { key: 'name', label: 'User' },
+                  { key: 'position', label: 'Position' },
+                  { key: 'location', label: 'Office' },
+                  { key: 'age', label: 'Age' },
+                  { key: 'date', label: 'Start Date' },
+                  { key: 'salary', label: 'Salary' },
                 ].map(({ key, label }) => (
                   <TableCell
                     key={key}
@@ -258,16 +246,12 @@ export default function DataTableTwo() {
                       <button className="flex flex-col gap-0.5">
                         <AngleUpIcon
                           className={`text-gray-300 dark:text-gray-700 ${
-                            sortKey === key && sortOrder === "asc"
-                              ? "text-brand-500"
-                              : ""
+                            sortKey === key && sortOrder === 'asc' ? 'text-brand-500' : ''
                           }`}
                         />
                         <AngleDownIcon
                           className={`text-gray-300 dark:text-gray-700 ${
-                            sortKey === key && sortOrder === "desc"
-                              ? "text-brand-500"
-                              : ""
+                            sortKey === key && sortOrder === 'desc' ? 'text-brand-500' : ''
                           }`}
                         />
                       </button>
