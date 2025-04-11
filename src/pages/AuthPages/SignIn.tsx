@@ -13,7 +13,7 @@ import PageMeta from '../../components/common/PageMeta';
 import useAxios from '../../hooks/useAxios';
 import { LoginResponse } from '../../types/AuthTypes';
 import Cookies from 'js-cookie';
-import { setChallange } from '../../redux/slices/authSlice';
+import { setChallange, setSession } from '../../redux/slices/authSlice';
 import { useDispatch } from 'react-redux';
 
 export default function SignIn() {
@@ -50,6 +50,22 @@ export default function SignIn() {
             password: values.password,
           },
         });
+        //
+        // To be removed
+        //
+        Cookies.set('token', 'loginResponse', {
+          expires: 1,
+        });
+        dispatch(setChallange('NEW_PASSWORD_REQUIRED'));
+        dispatch(
+          setSession(
+            'AYABeAH1vdPBMWgrnvn6HKZk1a8AHQABAAdTZXJ2aWNlABBDb2duaXRvVXNlclBvb2xzAAEAB2F3cy1rbXMAS2Fybjphd3M6a21zOnVzLWVhc3QtMTo3NDU2MjM0Njc1NTU6a2V5L2IxNTVhZmNhLWJmMjktNGVlZC1hZmQ4LWE5ZTA5MzY1M2RiZQC4AQIBAHhR9E4zNbI1ofi3Y01_Ljgh2wK-ZaC__bKufjbgmejy4gHeRLf2DGPlwlhYZVmgQR7hAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMg1MvyPbwtrKGfzW1AgEQgDtgkY0e2p1ZNSQrSXeDsdn5Ds5Ew7nv5lVQiBAi_5eb0Bok11HLDVJGfKqTZs9tD5PbK2qTU_CuwzuLowIAAAAADAAAEAAAAAAAAAAAAAAAAADkva5wmN7rA6wJHFtFhHDf_____wAAAAEAAAAAAAAAAAAAAAEAAADhGcemGODOu49b7CGyfuqdLjwi0JWeo8qpUU2T2OV_187J4_IuIqrQpFyBVN1PfU3Wx9zQ_wpeaiU1WOwJYiqE9JwXTrSDe_mP3kE2QIW85HqRb62hfADRecmT-9N15RQi3Do6BBOrf7oDWZh0ByEi0ffkW-srD-USN2RC4OIqRHHdxH-2uZIKMeat3NB1osSquqGJygdF3Ecf2kI50EgPQyACPRT3eir_6QQhH1w72JtdW0S626olAqn24TY8HhU_fzvVBiO2Sf_-8hwY6gFG5CISYGDAg5pBNvJ4_zIEnbSojwd3NKWDLoSpQp9EDgunOA',
+          ),
+        );
+        navigate('/');
+        //
+        //
+        //
       } catch (err) {
         alert(loginError || 'Login failed. Please try again.');
       }
@@ -65,10 +81,11 @@ export default function SignIn() {
       });
       if (loginResponse.body.response.ChallengeName) {
         dispatch(setChallange(loginResponse.body.response.ChallengeName));
+        dispatch(setSession(loginResponse.body.response.Session));
       }
+      alert('Login successful!');
+      navigate('/');
     }
-    navigate('/');
-    alert('Login successful!');
     if (loginError) {
       alert(loginError);
     }
@@ -206,7 +223,7 @@ export default function SignIn() {
                         </span>
                       </div>
                       <Link
-                        to="/"
+                        to="/reset-password"
                         className="text-sm text-brand-500 hover:text-brand-600 dark:text-brand-400"
                       >
                         Forgot password?

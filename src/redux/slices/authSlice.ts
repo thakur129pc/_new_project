@@ -2,10 +2,12 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface AuthState {
   challange: string | null;
+  session: string | null;
 }
 
 const initialState: AuthState = {
   challange: null,
+  session: null,
 };
 
 const authSlice = createSlice({
@@ -18,8 +20,14 @@ const authSlice = createSlice({
     clearChallange: (state) => {
       state.challange = null;
     },
+    setSession: (state, action: PayloadAction<string>) => {
+      state.session = action.payload;
+    },
+    clearSession: (state) => {
+      state.session = null;
+    },
   },
 });
 
-export const { setChallange, clearChallange } = authSlice.actions;
+export const { setChallange, clearChallange, setSession, clearSession } = authSlice.actions;
 export default authSlice.reducer;

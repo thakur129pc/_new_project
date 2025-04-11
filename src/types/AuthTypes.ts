@@ -9,12 +9,19 @@ export interface LoginResponse {
         TokenType: string;
       };
       ChallengeName: string;
+      Session: string;
       ChallengeParameters: {
         USER_ID_FOR_SRP: string;
         requiredAttributes: string;
         userAttributes: string;
       };
     };
+  };
+  success: boolean;
+}
+export interface ChangePasswordResponse {
+  body: {
+    message: string;
   };
   success: boolean;
 }
