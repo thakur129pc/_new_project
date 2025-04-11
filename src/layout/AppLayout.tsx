@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SidebarProvider, useSidebar } from '../context/SidebarContext';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigate } from 'react-router';
+import Cookies from 'js-cookie'; // Assuming you're using js-cookie to manage cookies
 import AppHeader from './AppHeader';
 import Backdrop from './Backdrop';
 import AppSidebar from './AppSidebar';
 
 const LayoutContent: React.FC = () => {
   const { isExpanded, isHovered, isMobileOpen } = useSidebar();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = Cookies.get('token');
+    if (!token) {
+      navigate('/signin');
+    }
+  }, [navigate]);
 
   return (
     <div className="min-h-screen xl:flex">

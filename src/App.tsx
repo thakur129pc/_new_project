@@ -59,6 +59,8 @@ import ResetPassword from './pages/AuthPages/ResetPassword';
 import TwoStepVerification from './pages/AuthPages/TwoStepVerification';
 import Success from './pages/OtherPage/Success';
 import AppLayout from './layout/AppLayout';
+import ProtectedRoute from './layout/ProtectedRoute';
+import OpenRoute from './layout/OpenRoute';
 
 export default function App() {
   return (
@@ -66,7 +68,13 @@ export default function App() {
       <Router>
         <Routes>
           {/* Dashboard Layout */}
-          <Route element={<AppLayout />}>
+          <Route
+            element={
+              <ProtectedRoute>
+                <AppLayout />
+              </ProtectedRoute>
+            }
+          >
             <Route index path="/" element={<Ecommerce />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/marketing" element={<Marketing />} />
@@ -133,7 +141,13 @@ export default function App() {
           </Route>
 
           {/* Auth Layout */}
-          <Route element={<AuthLayout />}>
+          <Route
+            element={
+              <OpenRoute>
+                <AuthLayout />
+              </OpenRoute>
+            }
+          >
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/reset-password" element={<ResetPassword />} />

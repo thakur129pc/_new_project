@@ -9,15 +9,22 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import { ThemeProvider } from './context/ThemeContext';
 import { AppWrapper } from './components/common/PageMeta';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistor, store } from './redux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <AppWrapper>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </AppWrapper>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <AppWrapper>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </AppWrapper>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>,
 );
 

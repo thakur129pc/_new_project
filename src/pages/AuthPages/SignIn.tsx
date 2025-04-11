@@ -12,18 +12,23 @@ import Button from '../../components/ui/button/Button';
 import PageMeta from '../../components/common/PageMeta';
 import useAxios from '../../hooks/useAxios';
 import { LoginResponse } from '../../types/AuthTypes';
-// import Cookies from 'js-cookie';
+import Cookies from 'js-cookie';
+import { setChallange } from '../../redux/slices/authSlice';
+import { useDispatch } from 'react-redux';
 
 export default function SignIn() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
 
-  const { data, error, callAPI, loading } = useAxios<LoginResponse>(
-    '/Stage/org/login-user',
-    'POST',
-  );
+  const {
+    data: loginResponse,
+    error: loginError,
+    callAPI: loginAPI,
+    loading,
+  } = useAxios<LoginResponse>('/Stage/org/login-user', 'POST');
 
   const formik = useFormik({
     initialValues: {
@@ -39,30 +44,36 @@ export default function SignIn() {
     onSubmit: async (values) => {
       try {
         // Call the login API using useAxios
-        await callAPI({
+        await loginAPI({
           data: {
             username: values.email,
             password: values.password,
           },
         });
       } catch (err) {
-        alert(error || 'Login failed. Please try again.');
+        alert(loginError || 'Login failed. Please try again.');
       }
     },
   });
 
   useEffect(() => {
-    if (data?.body?.response?.AuthenticationResult?.IdToken) {
-      // Cookies.set('token', data.body.response.AuthenticationResult.IdToken, {
-      //   expires: 1,
-      // });
-      navigate('/');
-      alert('Login successful!');
+    if (loginResponse?.success) {
+      Cookies.set('token', loginResponse.body.response.AuthenticationResult.IdToken, {
+        expires: loginResponse.body.response.AuthenticationResult.ExpiresIn,
+        secure: true,
+        sameSite: 'Strict',
+      });
+      if (loginResponse.body.response.ChallengeName) {
+        dispatch(setChallange(loginResponse.body.response.ChallengeName));
+      }
     }
-    if (error) {
-      alert(error);
+    navigate('/');
+    alert('Login successful!');
+    if (loginError) {
+      alert(loginError);
     }
-  }, [data, error, navigate]);
+  }, [loginResponse, loginError, navigate, dispatch]);
+
   return (
     <>
       <PageMeta
